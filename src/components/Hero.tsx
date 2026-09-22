@@ -54,17 +54,25 @@ export const Hero: React.FC<HeroProps> = ({
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-8 flex flex-col items-start"
           >
-            {/* Status & Availability Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-100 dark:bg-stone-900 border border-stone-300/80 dark:border-stone-800 text-stone-700 dark:text-stone-300 text-xs font-medium mb-6 shadow-2xs">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span>{PERSONAL_INFO.availabilityStatus}</span>
+            {/* Status & Intro Eyebrow */}
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-300/80 dark:border-emerald-800/80 text-emerald-800 dark:text-emerald-300 text-xs sm:text-sm font-medium shadow-2xs">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span>Halo, saya Alfi</span>
+              </div>
+
+              {PERSONAL_INFO.availabilityStatus && (
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-400 text-xs">
+                  <span>{PERSONAL_INFO.availabilityStatus}</span>
+                </div>
+              )}
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-normal tracking-tight text-stone-900 dark:text-stone-100 leading-[1.1] mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-normal tracking-tight text-stone-900 dark:text-stone-100 leading-[1.2] mb-4">
               Arsitektur Sistem Tangguh &{' '}
               <span className="font-serif italic font-normal text-emerald-800 dark:text-emerald-400">
                 Pemberdayaan Talenta IT
@@ -73,8 +81,8 @@ export const Hero: React.FC<HeroProps> = ({
             </h1>
 
             {/* Sub-headline */}
-            <p className="text-lg sm:text-xl text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl mb-8">
-              Halo, saya <span className="font-semibold text-stone-900 dark:text-stone-100">{PERSONAL_INFO.name}</span> — 
+            <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl mb-7">
+              Halo, saya <span className="font-semibold text-stone-900 dark:text-stone-100">{PERSONAL_INFO.name || 'Alfi'}</span> — 
               IT Specialist &amp; Principal Corporate Trainer. Berpengalaman 8+ tahun merancang sistem 
               skala tinggi dan memandu lebih dari <strong className="font-semibold text-stone-900 dark:text-stone-100">5.200+ profesional teknologi</strong> menguasai 
               Cloud Native, Microservices, dan AI Engineering.

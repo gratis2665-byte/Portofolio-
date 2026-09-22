@@ -14,6 +14,7 @@ import {
 
 export const PERSONAL_INFO: PersonalInfo = {
   fullName: 'Alfi',
+  name: 'Alfi',
   title: 'Spesialis IT & Principal Technical Trainer',
   location: 'Jakarta & Bandung, Indonesia',
   bio: 'Spesialis IT, Arsitek Cloud Native, dan Pelatih Teknis Senior dengan lebih dari 8 tahun pengalaman dalam merancang sistem skala besar serta melatih lebih dari 5.200 engineer di 45+ korporasi dan institusi terkemuka di Indonesia.',
@@ -21,6 +22,7 @@ export const PERSONAL_INFO: PersonalInfo = {
   whatsappNumber: '6281289214470',
   linkedinUrl: 'https://linkedin.com',
   githubUrl: 'https://github.com',
+  availabilityStatus: 'Tersedia untuk Pelatihan & Konsultasi 2026',
   specializations: [
     'Arsitektur Cloud Native & Kubernetes (CKA)',
     'Arsitektur Mikroservis & Distributed Systems',

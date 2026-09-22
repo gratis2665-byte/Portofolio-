@@ -76,19 +76,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </motion.header>
 
       {/* 2. Hero Heading */}
-      <div className="w-full overflow-hidden px-4 sm:px-6 md:px-10 mt-6 sm:mt-4 md:-mt-5 z-0">
+      <div className="w-full px-4 sm:px-6 md:px-10 mt-3 sm:mt-4 md:mt-2 z-0 flex flex-col items-center justify-center">
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-          className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center select-none text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw]"
+          transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
+          className="hero-heading font-extrabold uppercase tracking-wider leading-tight text-center select-none text-xl sm:text-2xl md:text-3xl lg:text-4xl"
         >
           Halo, saya alfi
         </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+          className="text-[11px] sm:text-xs md:text-sm text-[#A0B0BC] uppercase tracking-widest mt-1 text-center font-normal"
+        >
+          3D Creator &amp; Spesialis IT
+        </motion.p>
       </div>
 
       {/* 3. Hero Portrait with Magnet effect */}
-      <div className="absolute left-1/2 -translate-x-1/2 z-10 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto">
+      <div className="absolute left-1/2 -translate-x-1/2 z-10 w-[240px] sm:w-[300px] md:w-[360px] lg:w-[440px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
