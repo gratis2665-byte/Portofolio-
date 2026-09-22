@@ -27,14 +27,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandMenu, onOpenGoogleS
   const [activeSection, setActiveSection] = useState('hero');
 
   const navLinks = [
-    { name: 'Tentang Saya', href: '#tentang' },
+    { name: 'Tentang Saya', href: '#about' },
+    { name: 'Proyek', href: '#projects' },
     { name: 'Statistik', href: '#statistik' },
-    { name: 'Proyek', href: '#proyek' },
-    { name: 'Pelatihan', href: '#pelatihan' },
+    { name: 'Estimasi', href: '#estimator' },
     { name: 'Galeri', href: '#galeri' },
-    { name: 'Testimoni', href: '#testimoni' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Kontak', href: '#kontak' },
+    { name: 'Wawasan', href: '#blog' },
+    { name: 'Kontak', href: '#contact' },
   ];
 
   useEffect(() => {

@@ -204,7 +204,7 @@ Mohon informasi ketersediaan jadwal Mas Alfi serta proposal silabus detailnya. T
                   >
                     <option value="2 Hari (Weekend / Fast Track)">2 Hari Workshop</option>
                     <option value="3 - 4 Hari Intensif">3 - 4 Hari Intensif</option>
-                    <option value="6 - 8 Minggu Bootcamp">6 - 8 Minggu Bootcamp</option>
+                    <option value="Program Pendampingan 4 - 6 Pekan">Program Pendampingan 4 - 6 Pekan</option>
                   </select>
                 </div>
               </div>

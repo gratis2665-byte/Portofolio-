@@ -1,16 +1,37 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { ProjectShowcaseItem, SHOWCASE_PROJECTS } from '../data/portfolioData';
 
-const LOCAL_STORAGE_KEY = 'alfi_portfolio_custom_projects_v1';
+const LOCAL_STORAGE_KEY = 'alfi_portfolio_trainer_programs_v3';
+
+const isStaleTechProject = (item: any): boolean => {
+  if (!item || !Array.isArray(item.technologies)) return false;
+  const techString = item.technologies.join(' ').toLowerCase();
+  return (
+    techString.includes('three.js') ||
+    techString.includes('webgl') ||
+    techString.includes('react 19') ||
+    techString.includes('web audio') ||
+    techString.includes('typescript') ||
+    techString.includes('tailwind css')
+  );
+};
+
+const sanitizeProjects = (data: any): ProjectShowcaseItem[] => {
+  if (!Array.isArray(data) || data.length === 0) return SHOWCASE_PROJECTS;
+  if (data.some(isStaleTechProject)) return SHOWCASE_PROJECTS;
+  return data;
+};
 
 interface ProjectContextType {
   projects: ProjectShowcaseItem[];
+  isLoading: boolean;
   activeProjectId: string | null;
   setActiveProjectId: (id: string | null) => void;
   updateProject: (id: string, updatedFields: Partial<ProjectShowcaseItem>) => void;
   addProject: (newProject: ProjectShowcaseItem) => void;
   deleteProject: (id: string) => void;
   resetToDefaultProjects: () => void;
+  reloadProjects: () => Promise<void>;
   optimizeBloggerUrl: (url: string) => string;
   isCustomized: boolean;
 }
@@ -45,9 +66,7 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
       const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
-        }
+        return sanitizeProjects(parsed);
       }
     } catch (e) {
       console.warn('Gagal memuat proyek dari localStorage:', e);
@@ -57,6 +76,52 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
   const [isCustomized, setIsCustomized] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  // Initial simulated fetch to show smooth perceived skeleton loading
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      try {
+        const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          const sanitized = sanitizeProjects(parsed);
+          setProjects(sanitized);
+          if (sanitized !== SHOWCASE_PROJECTS) {
+            setIsCustomized(true);
+          }
+        }
+      } catch (e) {
+        console.warn('Gagal memuat proyek dari localStorage:', e);
+      } finally {
+        setIsLoading(false);
+      }
+    }, 600);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const reloadProjects = async () => {
+    setIsLoading(true);
+    await new Promise((resolve) => setTimeout(resolve, 600));
+    try {
+      const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const sanitized = sanitizeProjects(parsed);
+        setProjects(sanitized);
+        if (sanitized !== SHOWCASE_PROJECTS) {
+          setIsCustomized(true);
+        }
+      } else {
+        setProjects(SHOWCASE_PROJECTS);
+      }
+    } catch {
+      setProjects(SHOWCASE_PROJECTS);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
     try {
@@ -137,12 +202,14 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
     <ProjectContext.Provider
       value={{
         projects,
+        isLoading,
         activeProjectId,
         setActiveProjectId,
         updateProject,
         addProject,
         deleteProject,
         resetToDefaultProjects,
+        reloadProjects,
         optimizeBloggerUrl: optimizeBloggerImageUrl,
         isCustomized,
       }}

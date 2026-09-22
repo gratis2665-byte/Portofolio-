@@ -39,61 +39,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
       id="about"
       className="relative min-h-screen w-full bg-[#0C0C0C] px-5 sm:px-8 md:px-10 py-24 overflow-hidden flex flex-col items-center justify-center select-none"
     >
-      {/* 1. Top-Left Decorative 3D Moon */}
-      <div className="absolute top-[3%] left-[1%] sm:left-[2%] md:left-[4%] z-0 pointer-events-none">
-        <FadeIn delay={0.1} x={-80} y={0} duration={0.9}>
-          <img
-            src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png"
-            alt="Elemen 3D Moon"
-            className="w-[110px] sm:w-[150px] md:w-[200px] h-auto object-contain select-none opacity-80"
-            draggable={false}
-          />
-        </FadeIn>
-      </div>
-
-      {/* 2. Bottom-Left Decorative 3D Object */}
-      <div className="absolute bottom-[4%] left-[2%] sm:left-[5%] md:left-[8%] z-0 pointer-events-none">
-        <FadeIn delay={0.25} x={-80} y={0} duration={0.9}>
-          <img
-            src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png"
-            alt="Elemen 3D Shape"
-            className="w-[90px] sm:w-[130px] md:w-[170px] h-auto object-contain select-none opacity-80"
-            draggable={false}
-          />
-        </FadeIn>
-      </div>
-
-      {/* 3. Top-Right Decorative 3D Lego Icon */}
-      <div className="absolute top-[3%] right-[1%] sm:right-[2%] md:right-[4%] z-0 pointer-events-none">
-        <FadeIn delay={0.15} x={80} y={0} duration={0.9}>
-          <img
-            src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png"
-            alt="Elemen 3D Lego"
-            className="w-[110px] sm:w-[150px] md:w-[200px] h-auto object-contain select-none opacity-80"
-            draggable={false}
-          />
-        </FadeIn>
-      </div>
-
-      {/* 4. Bottom-Right Decorative 3D Group */}
-      <div className="absolute bottom-[4%] right-[2%] sm:right-[5%] md:right-[8%] z-0 pointer-events-none">
-        <FadeIn delay={0.3} x={80} y={0} duration={0.9}>
-          <img
-            src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png"
-            alt="Elemen 3D Group"
-            className="w-[120px] sm:w-[160px] md:w-[210px] h-auto object-contain select-none opacity-80"
-            draggable={false}
-          />
-        </FadeIn>
-      </div>
-
       {/* Center Content Container */}
       <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center">
         {/* Main Heading in Indonesian */}
         <FadeIn delay={0} y={30}>
           <h2
             className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-4 select-none"
-            style={{ fontSize: 'clamp(2.8rem, 10vw, 130px)' }}
+            style={{ fontSize: 'clamp(2rem, 6.5vw, 4.5rem)' }}
           >
             Tentang Saya
           </h2>
@@ -104,7 +56,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
 
         {/* Scroll-driven character reveal text in Indonesian */}
         <div className="w-full max-w-4xl px-4 mb-12 text-center">
-          <AnimatedText text="Dengan lebih dari 8 tahun pengalaman sebagai Spesialis IT dan Principal Technical Trainer, saya berfokus pada arsitektur cloud enterprise, sistem terdistribusi, dan pengembangan talenta engineering. Telah melatih lebih dari 5.200 engineer di 45+ korporasi, saya memadukan keahlian teknis mendalam dengan pedagogi terstruktur untuk membangun tim berkinerja tinggi." />
+          <AnimatedText text="Sebagai seorang trainer dan fasilitator pelatihan, saya berfokus mendampingi peserta membangun keterampilan komunikasi efektif, teknik presentasi memikat, dan rasa percaya diri berbicara di depan umum secara ramah dan aplikatif. Telah mendampingi 280+ peserta, saya memadukan simulasi interaktif dengan 100% latihan langsung agar setiap sesi pelatihan terasa dinamis, bermakna, dan menyenangkan." />
         </div>
 
         {/* Interactive Detail Switcher */}
@@ -155,13 +107,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
                 <div className="space-y-4">
                   <h3 className="text-lg font-bold text-white uppercase tracking-wide flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-[#B600A8]" />
-                    <span>Filosofi Pengajaran Hands-On</span>
+                    <span>Metode Pelatihan Praktis &amp; Partisipatif</span>
                   </h3>
                   <p className="text-sm text-[#D7E2EA]/80 leading-relaxed">
-                    Saya meyakini bahwa teknologi terbaik adalah teknologi yang dapat dipahami, diimplementasikan, dan dipelihara secara mandiri oleh tim Anda. Sesi pelatihan mengadopsi rasio <strong>80% Hands-on Lab &amp; 20% Arsitektur Konsep</strong>.
+                    Saya meyakini bahwa keterampilan komunikasi dan berbicara di depan umum dapat dilatih oleh siapa saja melalui lingkungan belajar yang aman secara psikologis, ramah, dan bebas canggung. Sesi pelatihan mengadopsi rasio <strong>80% Praktik &amp; Simulasi Nyata, 20% Pemahaman Konsep</strong>.
                   </p>
                   <p className="text-sm text-[#D7E2EA]/80 leading-relaxed">
-                    Setiap modul dirancang dari skenario produksi nyata—bukan sekadar tutorial dasar—mencakup simulasi kegagalan sistem, security best practices, dan benchmarking performa tinggi.
+                    Setiap modul dirancang aplikatif—mulai dari latihan pernapasan diafragma, teknik menyusun poin presentasi lugas, hingga roleplay skenario kerja tim sehari-hari dengan umpan balik apresiatif langsung.
                   </p>
                 </div>
 

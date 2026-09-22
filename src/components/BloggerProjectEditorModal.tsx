@@ -130,30 +130,30 @@ export const BloggerProjectEditorModal: React.FC<BloggerProjectEditorModalProps>
     const newProj: ProjectShowcaseItem = {
       id: newId,
       number: nextNumber,
-      category: 'Teknologi & Cloud Native',
-      badge: 'Baru: 2026',
-      name: 'Proyek Kustom Baru',
-      subtitle: 'Platform Aplikasi Cloud & Sistem Modern',
-      tagline: 'Solusi teknologi berkinerja tinggi dengan arsitektur modern.',
+      category: 'Program Pelatihan & Workshop',
+      badge: 'Program Baru: 2026',
+      name: 'Program Pelatihan Kustom Baru',
+      subtitle: 'Workshop Interaktif & Simulasi Keterampilan',
+      tagline: 'Membangun kompetensi komunikasi dan kepemimpinan secara aplikatif.',
       description:
-        'Deskripsi proyek yang dapat Anda sesuaikan sepenuhnya menggunakan foto hasil unggahan Blogger / Blogspot.',
-      technologies: ['React 19', 'TypeScript', 'Tailwind CSS', 'Cloud Native'],
+        'Deskripsi program pelatihan yang dapat Anda sesuaikan sepenuhnya menggunakan dokumentasi foto hasil unggahan Blogger / Blogspot.',
+      technologies: ['Public Speaking', 'Ice Breaking', 'Komunikasi Asertif', 'Metode Andragogi'],
       impactMetrics: [
-        'Peningkatan efisiensi sistem hingga 40%',
-        'Latensi respon berkurang drastis < 50ms',
-        'Kepuasan pengguna mencapai 99%',
+        'Peningkatan rasa percaya diri peserta hingga 95%',
+        'Tingkat keterlibatan aktif di kelas mencapai 98%',
+        'Skor evaluasi fasilitator 4.90 / 5.00',
       ],
       architectureHighlights: [
-        'Arsitektur modular dengan skalabilitas horizontal tinggi',
-        'Sistem keamanan berlapis dan pemantauan real-time',
+        'Simulasi praktik langsung dan roleplay terarah',
+        'Lembar kerja mandiri dan evaluasi terstruktur',
       ],
       col1Img1:
-        'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85',
+        'https://images.unsplash.com/photo-1544531585-9847b68c8c86?auto=format&fit=crop&w=1200&q=85',
       col1Img2:
-        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=85',
+        'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=85',
       col2Img:
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85',
-      ctaText: 'Jelajahi Proyek',
+        'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=85',
+      ctaText: 'Pelajari Program Pelatihan',
     };
 
     addProject(newProj);

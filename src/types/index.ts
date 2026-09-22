@@ -103,6 +103,7 @@ export interface GalleryPhoto {
   participantCount: number;
   description: string;
   imageUrl: string;
+  fallbackUrl?: string;
   highlights: string[];
 }
 

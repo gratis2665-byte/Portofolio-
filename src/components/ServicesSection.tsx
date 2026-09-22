@@ -68,7 +68,7 @@ const ProgramDetailModal: React.FC<ProgramDetailModalProps> = ({
           {/* Modules List */}
           <div className="space-y-4 mb-6">
             <h4 className="text-xs font-mono uppercase tracking-wider text-[#D7E2EA]/60">
-              Struktur Modul &amp; Hands-On Lab:
+              Struktur Modul &amp; Sesi Latihan:
             </h4>
             {program.syllabus.map((mod) => (
               <div
@@ -150,7 +150,7 @@ export const ServicesSection: React.FC<{ onInquire?: (title: string) => void }> 
         <FadeIn delay={0} y={40}>
           <div className="text-center mb-16 sm:mb-20 md:mb-24">
             <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#0C0C0C]/50 block mb-2">
-              Pelatihan Korporasi &bull; In-House Bootcamp &bull; Konsultasi Arsitektur
+              Workshop Interaktif &bull; Public Speaking &bull; Fasilitasi Pelatihan
             </span>
             <h2
               className="text-[#0C0C0C] font-black uppercase tracking-tight leading-none"

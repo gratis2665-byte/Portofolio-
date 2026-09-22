@@ -1,48 +1,32 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, Mail, Phone, MapPin, CheckCircle2, MessageSquare, FileSpreadsheet } from 'lucide-react';
-import { useGoogleSheets } from '../context/GoogleSheetsContext';
+import { X, Send, Mail, Phone, CheckCircle2, MessageSquare } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onOpenGoogleSheets?: () => void;
 }
 
 export const ContactModal: React.FC<ContactModalProps> = ({
   isOpen,
   onClose,
-  onOpenGoogleSheets,
 }) => {
-  const { isAuthenticated, logInquiry, activeSpreadsheet } = useGoogleSheets();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [projectType, setProjectType] = useState('3D Modeling & Rendering');
-  const [budget, setBudget] = useState('$1,000 - $3,000');
+  const [trainingType, setTrainingType] = useState('Workshop Public Speaking Pemula');
+  const [participantCount, setParticipantCount] = useState('10 - 30 Peserta');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (isAuthenticated) {
-      await logInquiry({
-        name,
-        email,
-        company: '3D Project Client',
-        topic: projectType,
-        format: budget,
-        message,
-        source: '3D Portfolio Contact Form',
-      });
-    }
-
     // Prepare WhatsApp message
     const waText = encodeURIComponent(
-      `Hi Alfi,\n\nI'm ${name} (${email}).\nProject Type: ${projectType}\nBudget Range: ${budget}\nMessage: ${message}\n\nLet's collaborate!`
+      `Halo Kak Alfi,\n\nSaya ${name} (${email}).\nTopik Pelatihan: ${trainingType}\nEstimasi Peserta: ${participantCount}\nCatatan / Kebutuhan: ${message}\n\nIngin berkonsultasi seputar jadwal pelatihan!`
     );
 
     window.open(`https://wa.me/${PERSONAL_INFO.whatsappNumber}?text=${waText}`, '_blank');
@@ -75,23 +59,24 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             <button
               onClick={onClose}
               className="absolute top-6 right-6 p-2 rounded-full bg-[#1F1F1F] text-[#D7E2EA] hover:bg-[#2A2A2A] transition-colors cursor-pointer"
+              aria-label="Tutup formulir kontak"
             >
               <X className="w-5 h-5" />
             </button>
 
             <h2 className="hero-heading text-2xl sm:text-3xl font-black uppercase tracking-tight mb-2">
-              Let&apos;s Build Together
+              Konsultasi Pelatihan
             </h2>
             <p className="text-sm text-[#D7E2EA]/70 mb-6">
-              Have an ambitious 3D project or want to collaborate? Drop a message below or contact Alfi directly.
+              Diskusikan kebutuhan workshop, seminar, atau sesi bimbingan bersama Alfi. Respon cepat via WhatsApp langsung.
             </p>
 
             {submitted ? (
               <div className="p-6 rounded-2xl bg-emerald-950/40 border border-emerald-800/60 text-center space-y-4">
                 <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
-                <h3 className="text-lg font-bold text-emerald-200 uppercase">Message Forwarded!</h3>
+                <h3 className="text-lg font-bold text-emerald-200 uppercase">Pesan Diteruskan!</h3>
                 <p className="text-xs text-emerald-300/80 leading-relaxed">
-                  Your project details have been prepared for WhatsApp chat. We will get back to you shortly.
+                  Rincian pelatihan Anda telah dialihkan ke WhatsApp Alfi. Kami akan segera merespons kebutuhan sesi Anda.
                 </p>
                 <button
                   onClick={() => {
@@ -100,7 +85,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   }}
                   className="px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold uppercase tracking-wider cursor-pointer"
                 >
-                  Close Window
+                  Tutup Jendela
                 </button>
               </div>
             ) : (
@@ -108,27 +93,27 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs uppercase font-medium tracking-wider text-[#D7E2EA]/70 mb-1">
-                      Your Name
+                      Nama Lengkap
                     </label>
                     <input
                       type="text"
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder="e.g. Alex Mercer"
+                      placeholder="e.g. Dimas Pratama"
                       className="w-full px-4 py-3 rounded-xl bg-[#1A1A1A] border border-[#2E2E2E] text-sm text-[#D7E2EA] focus:outline-none focus:border-[#B600A8] transition-colors"
                     />
                   </div>
                   <div>
                     <label className="block text-xs uppercase font-medium tracking-wider text-[#D7E2EA]/70 mb-1">
-                      Your Email
+                      Email / Instansi
                     </label>
                     <input
-                      type="email"
+                      type="text"
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="alex@company.com"
+                      placeholder="dimas@instansi.id"
                       className="w-full px-4 py-3 rounded-xl bg-[#1A1A1A] border border-[#2E2E2E] text-sm text-[#D7E2EA] focus:outline-none focus:border-[#B600A8] transition-colors"
                     />
                   </div>
@@ -137,47 +122,47 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs uppercase font-medium tracking-wider text-[#D7E2EA]/70 mb-1">
-                      Service
+                      Topik Pelatihan
                     </label>
                     <select
-                      value={projectType}
-                      onChange={(e) => setProjectType(e.target.value)}
+                      value={trainingType}
+                      onChange={(e) => setTrainingType(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-[#1A1A1A] border border-[#2E2E2E] text-sm text-[#D7E2EA] focus:outline-none focus:border-[#B600A8] transition-colors"
                     >
-                      <option>3D Modeling</option>
-                      <option>3D Rendering & Lighting</option>
-                      <option>Motion Design</option>
-                      <option>Visual Branding</option>
-                      <option>Web Design & Dev</option>
+                      <option>Workshop Public Speaking Pemula</option>
+                      <option>Pelatihan Fasilitator &amp; Ice-Breaking</option>
+                      <option>Komunikasi Efektif &amp; Presentasi Tim</option>
+                      <option>Bimbingan 1-on-1 Mengatasi Gugup</option>
+                      <option>Sesi Motivasi Belajar &amp; Kuliah Tamu</option>
                     </select>
                   </div>
                   <div>
                     <label className="block text-xs uppercase font-medium tracking-wider text-[#D7E2EA]/70 mb-1">
-                      Budget Range
+                      Estimasi Peserta
                     </label>
                     <select
-                      value={budget}
-                      onChange={(e) => setBudget(e.target.value)}
+                      value={participantCount}
+                      onChange={(e) => setParticipantCount(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-[#1A1A1A] border border-[#2E2E2E] text-sm text-[#D7E2EA] focus:outline-none focus:border-[#B600A8] transition-colors"
                     >
-                      <option>&lt; $1,000</option>
-                      <option>$1,000 - $3,000</option>
-                      <option>$3,000 - $7,000</option>
-                      <option>&gt; $7,000</option>
+                      <option>1 Peserta (Private 1-on-1)</option>
+                      <option>10 - 30 Peserta (Workshop Intim)</option>
+                      <option>30 - 60 Peserta (Pelatihan Kelompok)</option>
+                      <option>&gt; 60 Peserta (Seminar Terbuka)</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-xs uppercase font-medium tracking-wider text-[#D7E2EA]/70 mb-1">
-                    Project Details
+                    Detail Kebutuhan &amp; Rencana Tanggal
                   </label>
                   <textarea
                     rows={3}
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Describe your vision, timeline, and deliverables..."
+                    placeholder="Ceritakan gambaran peserta, target luaran pelatihan, serta perkiraan waktu pelaksanaan..."
                     className="w-full px-4 py-3 rounded-xl bg-[#1A1A1A] border border-[#2E2E2E] text-sm text-[#D7E2EA] focus:outline-none focus:border-[#B600A8] transition-colors resize-none"
                   />
                 </div>
@@ -193,8 +178,8 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     outlineOffset: '-3px',
                   }}
                 >
-                  <Send className="w-4 h-4" />
-                  <span>{isSubmitting ? 'Sending...' : 'Send Inquiry via WhatsApp'}</span>
+                  <MessageSquare className="w-4 h-4" />
+                  <span>{isSubmitting ? 'Mengarahkan...' : 'Kirim Konsultasi via WhatsApp'}</span>
                 </button>
               </form>
             )}
@@ -209,19 +194,6 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 <Phone className="w-3.5 h-3.5 text-[#B600A8]" />
                 <span>+62 858-1324-5678</span>
               </div>
-              {onOpenGoogleSheets && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    onClose();
-                    onOpenGoogleSheets();
-                  }}
-                  className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
-                >
-                  <FileSpreadsheet className="w-3.5 h-3.5" />
-                  <span>Sheets Sync</span>
-                </button>
-              )}
             </div>
           </motion.div>
         </div>

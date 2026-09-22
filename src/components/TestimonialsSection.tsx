@@ -1,21 +1,44 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import {
   Star,
   CheckCircle2,
 } from 'lucide-react';
 import { TESTIMONIALS } from '../data/portfolioData';
-import { FadeIn } from './FadeIn';
 
 export const TestimonialsSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const categories = [
     { id: 'all', label: 'Semua Testimoni' },
-    { id: 'corporate', label: 'Klien BUMN & Korporasi' },
-    { id: 'bootcamp', label: 'Alumni Bootcamp' },
-    { id: 'mentorship', label: 'Mentee & Akademisi' },
+    { id: 'corporate', label: 'Instansi & Komunitas' },
+    { id: 'bootcamp', label: 'Peserta Workshop' },
+    { id: 'mentorship', label: 'Mentee 1-on-1' },
   ];
+
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.08,
+      },
+    },
+  };
+
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 32, scale: 0.97 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.65,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  };
 
   const filteredTestimonials = selectedCategory === 'all'
     ? TESTIMONIALS
@@ -24,55 +47,65 @@ export const TestimonialsSection: React.FC = () => {
   return (
     <section id="testimoni" className="w-full bg-[#0C0C0C] py-24 px-5 sm:px-8 md:px-10 border-t border-[#1C1C1C] select-none relative z-10">
       <div className="max-w-5xl mx-auto">
-        {/* Section Header */}
-        <FadeIn delay={0} y={30}>
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-            <div>
-              <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#B600A8] block mb-2">
-                Client Reviews &bull; Endorsements
-              </span>
-              <h2
-                className="hero-heading font-black uppercase tracking-tight leading-none"
-                style={{ fontSize: 'clamp(2.4rem, 7vw, 90px)' }}
-              >
-                Testimonials
-              </h2>
-              <p className="text-[#D7E2EA]/60 text-xs sm:text-sm max-w-xl mt-3 leading-relaxed">
-                Ulasan terverifikasi dari para Tech Leader, VP of Engineering, dan tim developer yang telah mengikuti program pelatihan Alfi.
-              </p>
-            </div>
-
-            {/* Filter pills */}
-            <div className="flex flex-wrap items-center gap-1.5 p-1.5 rounded-full bg-[#181818] border border-[#282828] self-start md:self-auto">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider rounded-full transition-all cursor-pointer ${
-                    selectedCategory === cat.id
-                      ? 'bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-white shadow-md'
-                      : 'text-[#D7E2EA]/60 hover:text-white'
-                  }`}
-                >
-                  {cat.label}
-                </button>
-              ))}
-            </div>
+        {/* Section Header with smooth scroll reveal */}
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
+        >
+          <div>
+            <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#B600A8] block mb-2">
+              Ulasan Peserta &bull; Dampak Nyata
+            </span>
+            <h2
+              className="hero-heading font-black uppercase tracking-tight leading-none"
+              style={{ fontSize: 'clamp(2rem, 6.5vw, 4.5rem)' }}
+            >
+              Testimoni
+            </h2>
+            <p className="text-[#D7E2EA]/60 text-xs sm:text-sm max-w-xl mt-3 leading-relaxed">
+              Ulasan nyata dari peserta workshop, panitia seminar, dan individu yang telah merasakan peningkatan rasa percaya diri berbicara bersama Alfi.
+            </p>
           </div>
-        </FadeIn>
 
-        {/* Testimonials Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          <AnimatePresence>
+          {/* Filter pills */}
+          <div className="flex flex-wrap items-center gap-1.5 p-1.5 rounded-full bg-[#181818] border border-[#282828] self-start md:self-auto">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider rounded-full transition-all cursor-pointer ${
+                  selectedCategory === cat.id
+                    ? 'bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-white shadow-md'
+                    : 'text-[#D7E2EA]/60 hover:text-white'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Testimonials Grid with Staggered Scroll Trigger */}
+        <motion.div
+          layout
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.08, margin: '-50px' }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          <AnimatePresence mode="popLayout">
             {filteredTestimonials.map((testimonial) => (
               <motion.div
                 key={testimonial.id}
                 layout
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.3 }}
-                className="p-6 rounded-[28px] bg-[#141414] border border-[#262626] hover:border-[#383838] transition-all flex flex-col justify-between"
+                variants={cardVariants}
+                exit={{ opacity: 0, scale: 0.94, transition: { duration: 0.25, ease: 'easeOut' } }}
+                whileHover={{ y: -6, transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } }}
+                className="p-6 rounded-[28px] bg-[#141414] border border-[#262626] hover:border-[#B600A8]/50 hover:shadow-[0_20px_40px_-15px_rgba(182,0,168,0.25),0_0_0_1px_rgba(182,0,168,0.18)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between shadow-md"
               >
                 <div>
                   {/* Rating Stars & Topic badge */}

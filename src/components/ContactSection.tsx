@@ -33,7 +33,7 @@ export const ContactSection: React.FC = () => {
     name: '',
     email: '',
     company: '',
-    serviceType: 'In-House Corporate Training',
+    serviceType: 'Bimbingan Belajar Koding dari Nol',
     message: '',
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -120,13 +120,13 @@ ${formData.message}`;
             <span>KONTAK &amp; DISKUSI</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-normal text-stone-900 dark:text-stone-100 tracking-tight">
-            Mulai Kolaborasi &amp;{' '}
+            Mulai Belajar &amp;{' '}
             <span className="font-serif italic text-emerald-800 dark:text-emerald-400">
               Konsultasi Pelatihan
             </span>
           </h2>
           <p className="text-stone-600 dark:text-stone-400 mt-2 text-base max-w-2xl">
-            Calon klien korporasi, institusi pendidikan, maupun komunitas teknologi dipersilakan untuk berdiskusi langsung melalui WhatsApp atau formulir di bawah ini.
+            Siapa saja yang ingin belajar koding dari nol, teman-teman mahasiswa, panitia workshop kampus, maupun pengurus komunitas dipersilakan untuk berdiskusi langsung melalui WhatsApp atau formulir di bawah ini.
           </p>
         </div>
 
@@ -332,10 +332,10 @@ ${formData.message}`;
                       onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-xs text-stone-900 dark:text-stone-100 focus:outline-hidden focus:border-emerald-600"
                     >
-                      <option value="In-House Corporate Training">In-House Corporate Training</option>
-                      <option value="Konsultasi Arsitektur IT & Cloud">Konsultasi Arsitektur IT &amp; Cloud</option>
-                      <option value="Keynote Speaker / Kuliah Tamu">Keynote Speaker / Kuliah Tamu</option>
-                      <option value="Mentoring Bootcamp / Custom Labs">Mentoring Bootcamp / Custom Labs</option>
+                      <option value="Bimbingan Belajar Koding dari Nol">Bimbingan Belajar Koding dari Nol</option>
+                      <option value="Kelas Privat 1-on-1 / Kelompok Kecil">Kelas Privat 1-on-1 / Kelompok Kecil</option>
+                      <option value="Fasilitator Workshop Kampus & Komunitas">Fasilitator Workshop Kampus &amp; Komunitas</option>
+                      <option value="Mentoring Praktikum & Bimbingan Tugas">Mentoring Praktikum &amp; Bimbingan Tugas</option>
                       <option value="Lainnya">Lainnya</option>
                     </select>
                   </div>

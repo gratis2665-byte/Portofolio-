@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, MapPin, Calendar, Users, Building, CheckCircle2 } from 'lucide-react';
 import { GalleryPhoto } from '../types';
+import { ImageWithSkeleton } from './ImageWithSkeleton';
 
 interface GalleryModalProps {
   photo: GalleryPhoto | null;
@@ -42,9 +43,11 @@ export const GalleryModal: React.FC<GalleryModalProps> = ({ photo, onClose }) =>
 
           {/* Full Image */}
           <div className="relative w-full h-80 sm:h-96 md:h-[420px] bg-[#0C0C0C]">
-            <img
+            <ImageWithSkeleton
               src={photo.imageUrl}
+              fallbackSrc={photo.fallbackUrl}
               alt={photo.title}
+              showSpinner
               className="w-full h-full object-cover"
             />
           </div>

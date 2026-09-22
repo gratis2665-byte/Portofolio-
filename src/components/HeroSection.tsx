@@ -6,6 +6,7 @@ import { Magnet } from './Magnet';
 interface HeroSectionProps {
   onContactClick?: () => void;
   onAboutClick?: () => void;
+  onGalleryClick?: () => void;
   onPriceClick?: () => void;
   onProjectsClick?: () => void;
 }
@@ -13,6 +14,7 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({
   onContactClick,
   onAboutClick,
+  onGalleryClick,
   onPriceClick,
   onProjectsClick,
 }) => {
@@ -47,12 +49,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </button>
           <button
             onClick={() => {
-              if (onPriceClick) onPriceClick();
-              else scrollTo('estimator');
+              if (onGalleryClick) onGalleryClick();
+              else if (onPriceClick) onPriceClick();
+              else scrollTo('galeri');
             }}
             className="hover:opacity-70 transition-opacity duration-200 cursor-pointer bg-transparent border-none text-inherit uppercase font-medium tracking-wider"
           >
-            Estimasi
+            Galeri
           </button>
           <button
             onClick={() => {
@@ -81,17 +84,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-          className="hero-heading font-extrabold uppercase tracking-wider leading-tight text-center select-none text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+          className="hero-heading font-extrabold uppercase tracking-tight leading-none text-center select-none"
+          style={{ fontSize: 'clamp(1.85rem, 5.5vw, 4.25rem)' }}
         >
-          Halo, saya alfi
+          Halo, Saya Alfi
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-[11px] sm:text-xs md:text-sm text-[#A0B0BC] uppercase tracking-widest mt-1 text-center font-normal"
+          className="text-xs sm:text-sm text-[#A0B0BC] uppercase tracking-widest mt-1.5 text-center font-normal"
         >
-          3D Creator &amp; Spesialis IT
+          Trainer &amp; Fasilitator Pelatihan
         </motion.p>
       </div>
 
@@ -111,7 +115,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           >
             <img
               src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
-              alt="Potret Alfi - Spesialis IT"
+              alt="Potret Alfi"
               className="w-full h-auto object-contain max-h-[75vh] drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] pointer-events-none select-none"
               draggable={false}
             />
@@ -125,10 +129,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[170px] sm:max-w-[240px] md:max-w-[290px]"
-          style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.4rem)' }}
+          className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[200px] sm:max-w-[280px] md:max-w-[340px]"
+          style={{ fontSize: 'clamp(0.8125rem, 1.1vw, 1.1rem)' }}
         >
-          Spesialis IT &amp; Trainer dengan fokus pada sistem enterprise dan arsitektur tangguh
+          Trainer berdedikasi dengan fokus membimbing komunikasi, kepercayaan diri, dan pengembangan potensi diri peserta secara interaktif
         </motion.p>
 
         <motion.div
