@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, Variants } from 'framer-motion';
 import { ThemeProvider } from './context/ThemeContext';
 import { GoogleSheetsProvider } from './context/GoogleSheetsContext';
 import { ProjectProvider } from './context/ProjectContext';
@@ -11,6 +12,7 @@ import { TrainingGallerySection } from './components/TrainingGallerySection';
 import { TrainingEstimator } from './components/TrainingEstimator';
 import { BlogSection } from './components/BlogSection';
 import { Footer } from './components/Footer';
+import { SectionReveal } from './components/SectionReveal';
 import { ContactModal } from './components/ContactModal';
 import { ProjectViewerModal } from './components/ProjectViewerModal';
 import { ProjectShowcaseItem } from './data/portfolioData';
@@ -68,6 +70,17 @@ export default function App() {
     }
   };
 
+  const mainContainerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.05,
+      },
+    },
+  };
+
   return (
     <ThemeProvider>
       <GoogleSheetsProvider>
@@ -75,46 +88,74 @@ export default function App() {
           <div
             className="min-h-screen bg-[#0C0C0C] text-[#D7E2EA] font-sans select-none overflow-x-clip"
             style={{
-              fontFamily: "'Plus Jakarta Sans', sans-serif",
+              fontFamily: "'Kanit', sans-serif",
               overflowX: 'clip',
             }}
           >
             {/* Slim, elegant reading progress bar */}
             <ReadingProgressBar />
 
-            {/* Main Content */}
-            <main className="w-full flex flex-col">
+            {/* Main Content with Staggered Fade-In Reveal Container */}
+            <motion.main
+              variants={mainContainerVariants}
+              initial="hidden"
+              animate="visible"
+              className="w-full flex flex-col"
+            >
               {/* 1. Hero Section */}
-              <HeroSection
-                onContactClick={() => setContactModalOpen(true)}
-                onAboutClick={() => scrollTo('about')}
-                onGalleryClick={() => scrollTo('galeri')}
-                onProjectsClick={() => scrollTo('projects')}
-              />
+              <SectionReveal delay={0} yOffset={16} amount={0}>
+                <HeroSection
+                  onContactClick={() => setContactModalOpen(true)}
+                  onAboutClick={() => scrollTo('about')}
+                  onGalleryClick={() => scrollTo('galeri')}
+                  onProjectsClick={() => scrollTo('projects')}
+                />
+              </SectionReveal>
 
               {/* 2. Marquee Section */}
-              <MarqueeSection />
+              <SectionReveal delay={0.08} yOffset={24} amount={0}>
+                <MarqueeSection />
+              </SectionReveal>
 
               {/* 3. About Section */}
-              <AboutSection onContactClick={() => setContactModalOpen(true)} />
+              <SectionReveal delay={0.05} yOffset={32}>
+                <AboutSection onContactClick={() => setContactModalOpen(true)} />
+              </SectionReveal>
 
               {/* 4. Projects Section (Swipeable Slider & Stack with pure Trainer projects) */}
-              <ProjectsSection
-                onSelectProject={(proj) => setSelectedProject(proj)}
-              />
+              <SectionReveal delay={0.05} yOffset={32}>
+                <ProjectsSection
+                  onSelectProject={(proj) => setSelectedProject(proj)}
+                />
+              </SectionReveal>
 
               {/* 5. Impact & Statistics Section */}
-              <StatsSection />
+              <SectionReveal delay={0.05} yOffset={32}>
+                <StatsSection />
+              </SectionReveal>
 
               {/* 6. Interactive Training Estimator / Price Section */}
-              <TrainingEstimator />
+              <SectionReveal delay={0.05} yOffset={32}>
+                <TrainingEstimator />
+              </SectionReveal>
 
               {/* 7. Photo Gallery Section */}
-              <TrainingGallerySection />
+              <SectionReveal delay={0.05} yOffset={32}>
+                <TrainingGallerySection />
+              </SectionReveal>
 
               {/* 8. Technical Insights & Blog Section */}
-              <BlogSection />
-            </main>
+              <SectionReveal delay={0.05} yOffset={32}>
+                <BlogSection />
+              </SectionReveal>
+
+              {/* 9. Footer */}
+              <SectionReveal delay={0.05} yOffset={24}>
+                <Footer
+                  onContactClick={() => setContactModalOpen(true)}
+                />
+              </SectionReveal>
+            </motion.main>
 
             {/* Clean Floating Action Dock */}
             <div className="fixed bottom-6 right-6 z-40 flex items-center">
@@ -131,11 +172,6 @@ export default function App() {
                 <span>Hubungi Alfi</span>
               </button>
             </div>
-
-            {/* Footer */}
-            <Footer
-              onContactClick={() => setContactModalOpen(true)}
-            />
 
             {/* Modals & Overlays */}
             <ContactModal
