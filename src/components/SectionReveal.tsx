@@ -47,7 +47,7 @@ export const SectionReveal: React.FC<SectionRevealProps> = ({
         delay,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className={`transform-gpu will-change-transform ${className}`}
+      className={className}
     >
       {children}
     </motion.div>

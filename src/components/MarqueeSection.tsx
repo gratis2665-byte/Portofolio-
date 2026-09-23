@@ -151,7 +151,7 @@ export const MarqueeSection: React.FC = () => {
     <section
       ref={sectionRef}
       id="marquee"
-      className="w-full bg-[#0C0C0C] pt-24 sm:pt-32 md:pt-36 pb-12 overflow-hidden select-none border-t border-[#181818]/60"
+      className="w-full bg-[#FFFFFF] pt-24 sm:pt-32 md:pt-36 pb-12 overflow-hidden select-none border-t border-[#E2E8F0]"
     >
       <div className="flex flex-col gap-4">
         {/* Row 1 - Moves RIGHT on scroll */}
@@ -165,7 +165,7 @@ export const MarqueeSection: React.FC = () => {
           {TRIPLED_ROW1.map((item, index) => (
             <div
               key={`row1-${index}`}
-              className="group relative w-[280px] h-[180px] sm:w-[350px] sm:h-[220px] md:w-[400px] md:h-[250px] shrink-0 rounded-2xl overflow-hidden bg-[#141414] border border-[#242424] transition-transform duration-300 hover:scale-[1.02]"
+              className="group relative w-[280px] h-[180px] sm:w-[350px] sm:h-[220px] md:w-[400px] md:h-[250px] shrink-0 rounded-2xl overflow-hidden bg-white border border-[#E2E8F0] shadow-sm transition-all duration-300 hover:border-[#38BDF8] hover:shadow-xl hover:scale-[1.02]"
             >
               <ImageWithSkeleton
                 src={item.imageUrl}
@@ -174,12 +174,12 @@ export const MarqueeSection: React.FC = () => {
                 className="select-none filter contrast-[1.03] transition-transform duration-500 group-hover:scale-105"
                 draggable={false}
               />
-              {/* Elegant dark vignette overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
+              {/* Solid dark tint overlay */}
+              <div className="absolute inset-0 bg-[#0F172A]/70 pointer-events-none" />
 
-              {/* Training topic badge & title */}
-              <div className="absolute bottom-3.5 left-3.5 right-3.5 flex flex-col gap-1 pointer-events-none">
-                <span className="inline-block self-start px-2 py-0.5 rounded-full bg-[#181818]/90 backdrop-blur-md border border-[#333333] text-[10px] font-mono uppercase tracking-wider text-[#D7E2EA]/80">
+              {/* Training topic & title */}
+              <div className="absolute bottom-3.5 left-3.5 right-3.5 flex flex-col gap-0.5 pointer-events-none">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-sky-300 font-semibold">
                   {item.category}
                 </span>
                 <h4 className="text-sm sm:text-base font-bold text-white tracking-wide truncate drop-shadow-md">
@@ -201,7 +201,7 @@ export const MarqueeSection: React.FC = () => {
           {TRIPLED_ROW2.map((item, index) => (
             <div
               key={`row2-${index}`}
-              className="group relative w-[280px] h-[180px] sm:w-[350px] sm:h-[220px] md:w-[400px] md:h-[250px] shrink-0 rounded-2xl overflow-hidden bg-[#141414] border border-[#242424] transition-transform duration-300 hover:scale-[1.02]"
+              className="group relative w-[280px] h-[180px] sm:w-[350px] sm:h-[220px] md:w-[400px] md:h-[250px] shrink-0 rounded-2xl overflow-hidden bg-white border border-[#E2E8F0] shadow-sm transition-all duration-300 hover:border-[#38BDF8] hover:shadow-xl hover:scale-[1.02]"
             >
               <ImageWithSkeleton
                 src={item.imageUrl}
@@ -210,12 +210,12 @@ export const MarqueeSection: React.FC = () => {
                 className="select-none filter contrast-[1.03] transition-transform duration-500 group-hover:scale-105"
                 draggable={false}
               />
-              {/* Elegant dark vignette overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
+              {/* Solid dark tint overlay */}
+              <div className="absolute inset-0 bg-[#0F172A]/70 pointer-events-none" />
 
-              {/* Training topic badge & title */}
-              <div className="absolute bottom-3.5 left-3.5 right-3.5 flex flex-col gap-1 pointer-events-none">
-                <span className="inline-block self-start px-2 py-0.5 rounded-full bg-[#181818]/90 backdrop-blur-md border border-[#333333] text-[10px] font-mono uppercase tracking-wider text-[#D7E2EA]/80">
+              {/* Training topic & title */}
+              <div className="absolute bottom-3.5 left-3.5 right-3.5 flex flex-col gap-0.5 pointer-events-none">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-sky-300 font-semibold">
                   {item.category}
                 </span>
                 <h4 className="text-sm sm:text-base font-bold text-white tracking-wide truncate drop-shadow-md">

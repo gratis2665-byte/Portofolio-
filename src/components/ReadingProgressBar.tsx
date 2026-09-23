@@ -17,7 +17,7 @@ export const ReadingProgressBar: React.FC = () => {
     >
       <motion.div
         id="reading-progress-indicator"
-        className="h-full origin-left bg-gradient-to-r from-[#B600A8] via-[#7621B0] to-[#BE4C00] shadow-[0_0_10px_rgba(182,0,168,0.9)]"
+        className="h-full origin-left bg-[#0284C7]"
         style={{ scaleX }}
       />
     </div>

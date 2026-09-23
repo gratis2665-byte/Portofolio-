@@ -42,7 +42,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   return (
     <p
       ref={containerRef}
-      className={`text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[560px] select-none ${className}`}
+      className={`text-[#0F172A] font-medium text-center leading-relaxed max-w-[560px] select-none ${className}`}
       style={{
         fontSize: 'clamp(0.95rem, 1.4vw, 1.25rem)',
       }}

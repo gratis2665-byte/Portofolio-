@@ -1,16 +1,5 @@
 import React, { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
-import {
-  Users,
-  Calendar,
-  Award,
-  Building2,
-  TrendingUp,
-  CheckCircle,
-  BarChart3,
-  Star,
-  ShieldCheck,
-} from 'lucide-react';
 import { TRAINING_STATS } from '../data/portfolioData';
 
 export const StatsSection: React.FC = () => {
@@ -40,23 +29,23 @@ export const StatsSection: React.FC = () => {
   };
 
   const topicDistribution = [
-    { name: 'Public Speaking & Penguasaan Panggung (Artikulasi, Vokal & Gestur)', percentage: 40, batches: '10 Batch', color: 'from-[#B600A8] to-[#7621B0]' },
-    { name: 'Komunikasi Efektif & Sinergi Dinamika Tim (TeamSync)', percentage: 30, batches: '7 Batch', color: 'from-[#7621B0] to-[#BE4C00]' },
-    { name: 'Fasilitasi Workshop & Ice Breaking Interaktif (IceBreak Pro)', percentage: 20, batches: '5 Batch', color: 'from-[#BE4C00] to-amber-500' },
-    { name: 'Mentoring 1-on-1: Presentasi, Sidang & Interview', percentage: 10, batches: '4 Batch', color: 'from-emerald-500 to-teal-600' },
+    { name: 'Public Speaking & Percaya Diri di Panggung', percentage: 40, batches: '10 Batch', color: 'from-[#0284C7] to-[#38BDF8]' },
+    { name: 'Komunikasi Efektif & Kekompakan Tim (TeamSync)', percentage: 30, batches: '7 Batch', color: 'from-[#0369A1] to-[#0EA5E9]' },
+    { name: 'Ice Breaking Seru & Fasilitasi Interaktif (IceBreak Pro)', percentage: 20, batches: '5 Batch', color: 'from-sky-500 to-cyan-400' },
+    { name: 'Mentoring 1-on-1: Presentasi, Sidang & Wawancara', percentage: 10, batches: '4 Batch', color: 'from-emerald-500 to-teal-500' },
   ];
 
   const evaluationBreakdown = [
-    { metric: 'Kejelasan Materi & Kemudahan Memahami Materi Pelatihan', score: '4.96 / 5.00', percentage: 99.2 },
-    { metric: 'Pencairan Suasana Kelas Hangat & Ramah (Tanpa Canggung)', score: '4.94 / 5.00', percentage: 98.8 },
-    { metric: 'Simulasi Praktik Langsung & Feedback Membangun', score: '4.91 / 5.00', percentage: 98.2 },
-    { metric: 'Peningkatan Keberanian & Rasa Percaya Diri Peserta', score: '4.93 / 5.00', percentage: 98.6 },
+    { metric: 'Penyampaian materi jelas dan mudah dipraktikkan', score: '4.96 / 5.00', percentage: 99.2 },
+    { metric: 'Suasana kelas santai, seru, dan bebas canggung', score: '4.94 / 5.00', percentage: 98.8 },
+    { metric: 'Banyak simulasi langsung dan masukan yang membangun', score: '4.91 / 5.00', percentage: 98.2 },
+    { metric: 'Peserta merasa lebih berani dan percaya diri', score: '4.93 / 5.00', percentage: 98.6 },
   ];
 
   return (
     <section
       id="statistik"
-      className="w-full bg-[#0C0C0C] py-24 px-5 sm:px-8 md:px-10 border-t border-[#1C1C1C] select-none relative z-10"
+      className="w-full bg-[#F0F7FF]/50 py-24 px-5 sm:px-8 md:px-10 border-t border-[#E2E8F0] select-none relative z-10"
     >
       <div className="max-w-5xl mx-auto">
         {/* Section Header with subtle scroll reveal */}
@@ -68,51 +57,51 @@ export const StatsSection: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
         >
           <div>
-            <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#B600A8] block mb-2">
-              Rekam Jejak Sesi Pelatihan &bull; 2023 — 2026
+            <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#0284C7] font-semibold block mb-2">
+              Cerita &bull; Jejak Perjalanan
             </span>
             <h2
               className="hero-heading font-black uppercase tracking-tight leading-none"
               style={{ fontSize: 'clamp(2rem, 6.5vw, 4.5rem)' }}
             >
-              Statistik
+              Pengalaman Kelas
             </h2>
-            <p className="text-[#D7E2EA]/60 text-xs sm:text-sm max-w-xl mt-3 leading-relaxed">
-              Data dari evaluasi kepuasan peserta workshop pemula, kelas mini praktikum, dan sesi bimbingan 1-on-1 belajar koding.
+            <p className="text-[#475569] text-xs sm:text-sm max-w-xl mt-3 leading-relaxed">
+              Rangkuman seru dari sesi workshop, kelas santai, dan latihan bareng teman-teman peserta.
             </p>
           </div>
 
           {/* Tab Switcher */}
-          <div className="flex items-center p-1.5 rounded-full bg-[#181818] border border-[#2A2A2A] self-start md:self-auto">
+          <div className="flex items-center p-1 rounded-full bg-white border border-[#BAE6FD] self-start md:self-auto shadow-xs">
             <button
               onClick={() => setActiveTab('overview')}
-              className={`px-4 py-2 text-xs font-medium uppercase tracking-wider rounded-full transition-all cursor-pointer ${
+              className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full transition-all cursor-pointer ${
                 activeTab === 'overview'
-                  ? 'bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-white shadow-md'
-                  : 'text-[#D7E2EA]/60 hover:text-white'
+                  ? 'bg-[#0284C7] text-white shadow-xs'
+                  : 'text-[#64748B] hover:text-[#0F172A]'
               }`}
             >
               Ringkasan
             </button>
             <button
               onClick={() => setActiveTab('breakdown')}
-              className={`px-4 py-2 text-xs font-medium uppercase tracking-wider rounded-full transition-all cursor-pointer ${
+              className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full transition-all cursor-pointer ${
                 activeTab === 'breakdown'
-                  ? 'bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-white shadow-md'
-                  : 'text-[#D7E2EA]/60 hover:text-white'
+                  ? 'bg-[#0284C7] text-white shadow-xs'
+                  : 'text-[#64748B] hover:text-[#0F172A]'
               }`}
             >
-              Distribusi
+              Topik Materi
             </button>
             <button
               onClick={() => setActiveTab('evaluations')}
-              className={`px-4 py-2 text-xs font-medium uppercase tracking-wider rounded-full transition-all cursor-pointer ${
+              className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full transition-all cursor-pointer ${
                 activeTab === 'evaluations'
-                  ? 'bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-white shadow-md'
-                  : 'text-[#D7E2EA]/60 hover:text-white'
+                  ? 'bg-[#0284C7] text-white shadow-xs'
+                  : 'text-[#64748B] hover:text-[#0F172A]'
               }`}
             >
-              CSAT
+              Ulasan Peserta
             </button>
           </div>
         </motion.div>
@@ -130,31 +119,19 @@ export const StatsSection: React.FC = () => {
               <motion.div
                 key={stat.id}
                 variants={cardVariants}
-                className="p-6 rounded-[28px] bg-[#141414] border border-[#262626] hover:border-[#383838] transition-all flex flex-col justify-between h-full group"
+                className="p-6 rounded-[28px] bg-white border border-[#E2E8F0] hover:border-sky-300 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="p-2.5 rounded-2xl bg-[#1D1D1D] text-[#B600A8] group-hover:text-white group-hover:bg-[#B600A8] transition-colors">
-                    {stat.id === 'participants' && <Users className="w-5 h-5" />}
-                    {stat.id === 'batches' && <Calendar className="w-5 h-5" />}
-                    {stat.id === 'satisfaction' && <Award className="w-5 h-5" />}
-                    {stat.id === 'clients' && <Building2 className="w-5 h-5" />}
-                  </span>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-800/40">
-                    Terverifikasi
-                  </span>
-                </div>
-
                 <div>
                   <div
-                    className="font-black text-white leading-none tracking-tight mb-2"
-                    style={{ fontSize: 'clamp(1.85rem, 4.5vw, 3.2rem)' }}
+                    className="font-black text-[#0284C7] leading-none tracking-tight mb-3"
+                    style={{ fontSize: 'clamp(2.2rem, 5vw, 3.4rem)' }}
                   >
                     {stat.value}
                   </div>
-                  <div className="text-xs font-bold text-[#D7E2EA] uppercase tracking-wider mb-2">
+                  <div className="text-sm font-bold text-[#0F172A] uppercase tracking-wide mb-2">
                     {stat.label}
                   </div>
-                  <p className="text-xs text-[#D7E2EA]/50 leading-relaxed font-sans">
+                  <p className="text-xs text-[#475569] leading-relaxed font-sans">
                     {stat.subtext}
                   </p>
                 </div>
@@ -169,15 +146,14 @@ export const StatsSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px', amount: 0.15 }}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            className="p-6 sm:p-8 rounded-[32px] bg-[#141414] border border-[#262626]"
+            className="p-6 sm:p-8 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm"
           >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-base font-bold text-white uppercase tracking-wide flex items-center gap-2">
-                <BarChart3 className="w-4 h-4 text-[#B600A8]" />
-                <span>Distribusi Volume Materi Pelatihan (Total 18+ Batch)</span>
+            <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#E2E8F0]">
+              <h3 className="text-sm sm:text-base font-bold text-[#0F172A] uppercase tracking-wide">
+                Porsi Materi yang Sering Dibawakan (Total 18+ Batch)
               </h3>
-              <span className="text-xs text-[#D7E2EA]/50 font-mono">
-                Data 2023 — 2026
+              <span className="text-xs text-[#64748B] font-mono">
+                2023 — Sekarang
               </span>
             </div>
 
@@ -192,41 +168,41 @@ export const StatsSection: React.FC = () => {
                   className="space-y-2"
                 >
                   <div className="flex items-center justify-between text-xs sm:text-sm">
-                    <span className="font-semibold text-[#D7E2EA]">
+                    <span className="font-semibold text-[#1E293B]">
                       {topic.name}
                     </span>
                     <div className="flex items-center gap-3 font-mono text-xs">
-                      <span className="text-[#D7E2EA]/50">{topic.batches}</span>
-                      <span className="font-bold text-white">
+                      <span className="text-[#64748B]">{topic.batches}</span>
+                      <span className="font-bold text-[#0F172A]">
                         {topic.percentage}%
                       </span>
                     </div>
                   </div>
-                  <div className="h-3 w-full bg-[#202020] rounded-full overflow-hidden p-0.5 border border-[#2C2C2C]">
+                  <div className="h-2.5 w-full bg-[#F1F5F9] rounded-full overflow-hidden p-0.5 border border-[#E2E8F0]">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${topic.percentage}%` }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.9, delay: 0.15 + idx * 0.08, ease: 'easeOut' }}
-                      className={`h-full bg-gradient-to-r ${topic.color} rounded-full`}
+                      className="h-full bg-[#0284C7] rounded-full"
                     />
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-[#242424] grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#D7E2EA]/70">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>100% Praktikum Hands-on Lab Interaktif</span>
+            <div className="mt-8 pt-6 border-t border-[#E2E8F0] grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#475569]">
+              <div>
+                <strong className="text-[#0F172A] block mb-1">Praktik Langsung</strong>
+                <span>80% waktu dipakai untuk simulasi dan latihan nyata.</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Studi Kasus Skenario Produksi Riil</span>
+              <div>
+                <strong className="text-[#0F172A] block mb-1">Skenario Kehidupan Nyata</strong>
+                <span>Contoh kasus nyata saat presentasi kuliah maupun di kantor.</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Konsultasi &amp; Code Review Pasca Pelatihan</span>
+              <div>
+                <strong className="text-[#0F172A] block mb-1">Masukan Hangat</strong>
+                <span>Feedback personal tanpa bikin peserta merasa dihakimi.</span>
               </div>
             </div>
           </motion.div>
@@ -238,20 +214,15 @@ export const StatsSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px', amount: 0.15 }}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            className="p-6 sm:p-8 rounded-[32px] bg-[#141414] border border-[#262626]"
+            className="p-6 sm:p-8 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400">
-                <Star className="w-5 h-5 fill-amber-400" />
-              </div>
-              <div>
-                <h3 className="text-base font-bold text-white uppercase tracking-wide">
-                  Rata-rata Skor Kepuasan Peserta (CSAT): 4.91 / 5.00
-                </h3>
-                <p className="text-xs text-[#D7E2EA]/50 font-mono">
-                  Berdasarkan kuesioner evaluasi 280+ peserta dari kelas pemula &amp; komunitas
-                </p>
-              </div>
+            <div className="mb-6 pb-4 border-b border-[#E2E8F0]">
+              <h3 className="text-base sm:text-lg font-bold text-[#0F172A]">
+                Rating Kepuasan Rata-rata: <span className="text-[#0284C7]">4.91 / 5.0</span>
+              </h3>
+              <p className="text-xs text-[#64748B] mt-1">
+                Dari ulasan jujur 280+ peserta yang pernah ikutan workshop dan sesi latihan
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -262,23 +233,23 @@ export const StatsSection: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                  className="p-4 rounded-2xl bg-[#1A1A1A] border border-[#282828]"
+                  className="p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold text-[#D7E2EA]">
+                    <span className="text-xs font-semibold text-[#1E293B]">
                       {item.metric}
                     </span>
-                    <span className="text-xs font-mono font-bold text-emerald-400">
+                    <span className="text-xs font-mono font-bold text-[#0284C7]">
                       {item.score}
                     </span>
                   </div>
-                  <div className="h-2 w-full bg-[#242424] rounded-full overflow-hidden">
+                  <div className="h-2 w-full bg-[#E2E8F0] rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${item.percentage}%` }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.8, delay: 0.1 + idx * 0.08, ease: 'easeOut' }}
-                      className="h-full bg-emerald-500 rounded-full"
+                      className="h-full bg-[#0284C7] rounded-full"
                     />
                   </div>
                 </motion.div>

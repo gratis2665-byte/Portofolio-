@@ -17,18 +17,18 @@ export const PERSONAL_INFO: PersonalInfo = {
   name: 'Alfi',
   title: 'Trainer & Fasilitator Pelatihan',
   location: 'Jakarta & Bandung, Indonesia',
-  bio: 'Trainer dan fasilitator pelatihan berdedikasi tinggi yang fokus mendampingi peserta, mahasiswa, dan tim dalam membangun keterampilan komunikasi, public speaking, rasa percaya diri, serta manajemen waktu secara interaktif, ramah, dan aplikatif.',
+  bio: 'Trainer dan fasilitator pelatihan yang suka nemenin teman-teman, mahasiswa, dan tim kantor buat belajar public speaking, ngobrol lebih asik, dan bangun rasa percaya diri tanpa takut canggung.',
   email: 'gratis2665@gmail.com',
   whatsappNumber: '6281289214470',
   linkedinUrl: 'https://linkedin.com',
-  availabilityStatus: 'Tersedia untuk In-House Training, Workshop Kampus & Mentoring Privat',
+  availabilityStatus: 'Terbuka untuk workshop kampus, in-house training kantor, dan mentoring santai 1-on-1',
   specializations: [
-    'Teknik Presentasi & Public Speaking Memikat',
-    'Komunikasi Efektif & Dinamika Kerja Sama Tim',
-    'Manajemen Waktu, Prioritas & Produktivitas Harian',
-    'Dasar Kepemimpinan & Pengambilan Keputusan (Pemula)',
-    'Ice Breaking Dinamis & Fasilitasi Workshop Interaktif',
-    'Penyusunan Modul Pelatihan & Workbook Aplikatif',
+    'Public Speaking & Trik Tampil Percaya Diri',
+    'Komunikasi Asertif & Kekompakan Tim',
+    'Manajemen Waktu & Produktivitas Harian',
+    'Dasar Kepemimpinan Buat Pemula',
+    'Ice Breaking Seru & Fasilitasi Interaktif',
+    'Penyusunan Modul & Workbook Belajar Praktis',
   ],
 };
 
@@ -37,17 +37,17 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
     id: 'exp-1',
     role: 'Trainer & Fasilitator Pelatihan',
     company: 'Lembaga Pengembangan SDM & Talenta',
-    location: 'Jakarta & Daring (Online)',
+    location: 'Jakarta & Kelas Online',
     period: '2024 — Sekarang',
     type: 'Penuh Waktu (Full-time)',
     description:
-      'Merancang dan memfasilitasi program pelatihan komunikasi efektif, teknik presentasi, serta orientasi anggota tim baru. Menggunakan metode pembelajaran orang dewasa (andragogi) yang 80% berbasis simulasi, roleplay, dan diskusi interaktif.',
+      'Membawakan dan mendampingi kelas komunikasi asik, teknik presentasi santai tanpa keringat dingin, dan sesi bonding tim baru. Gaya belajarnya 80% langsung praktik, simulasi seru, dan obrolan dua arah yang hidup.',
     achievements: [
-      'Memfasilitasi 18+ batch kelas pelatihan dengan total lebih dari 280 peserta aktif.',
-      'Meraih skor kepuasan peserta (CSAT) 4.92 / 5.00 pada aspek kejelasan penyampaian dan keramahan fasilitator.',
-      'Mengembangkan 6 modul pelatihan dan buku panduan peserta (participant workbook) yang aplikatif.',
+      'Udah mandu 18+ angkatan kelas dengan lebih dari 280 teman belajar yang aktif.',
+      'Dapet rating kepuasan peserta (CSAT) 4.92 / 5.00 karena penyampaian yang ramah dan gampang ditangkap.',
+      'Ngerancang 6 modul belajar dan buku panduan latihan yang langsung bisa dipraktikkan di kantor maupun kampus.',
     ],
-    skills: ['Public Speaking', 'Fasilitasi Workshop', 'Ice Breaking', 'Komunikasi Asertif', 'Andragogi', 'Desain Modul'],
+    skills: ['Public Speaking', 'Fasilitasi Workshop', 'Ice Breaking', 'Komunikasi Asertif', 'Belajar Seru', 'Desain Modul'],
   },
   {
     id: 'exp-2',
@@ -57,13 +57,13 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
     period: '2023 — 2024',
     type: 'Inisiatif Komunitas & Workshop',
     description:
-      'Menginisiasi dan memimpin rangkaian workshop pengembangan rasa percaya diri, teknik berbicara di depan umum tanpa gugup, serta manajemen waktu untuk mahasiswa dan profesional muda.',
+      'Bikin dan mandu rangkaian kelas santai "Bicara Pede Tanpa Panik" buat teman-teman mahasiswa dan profesional muda yang sering ngerasa minder atau deg-degan parah pas disuruh ngomong di depan forum.',
     achievements: [
-      'Menyelenggarakan 14 sesi workshop bertajuk "Bicara Percaya Diri Tanpa Panik".',
-      'Membantu lebih dari 85 peserta pemalu berani tampil berbicara di depan forum.',
-      'Menyusun panduan latihan pernapasan diafragma dan artikulasi vokal yang dibagikan secara luas.',
+      'Ngegelar 14 sesi workshop santai yang ngebantu peserta mengatasi demam panggung.',
+      'Nemenin lebih dari 85 peserta yang awalnya pemalu banget sampai akhirnya berani maju dan bersuara lantang.',
+      'Nyusun tips latihan pernapasan perut dan olah vokal praktis yang gampang dicoba kapan aja.',
     ],
-    skills: ['Olah Vokal', 'Body Language', 'Mentoring 1-on-1', 'Dinamika Kelompok', 'Storytelling'],
+    skills: ['Olah Vokal', 'Bahasa Tubuh', 'Mentoring 1-on-1', 'Dinamika Kelompok', 'Storytelling'],
   },
   {
     id: 'exp-3',
@@ -73,12 +73,12 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
     period: '2022 — 2023',
     type: 'Paruh Waktu (Part-time)',
     description:
-      'Membantu pengelolaan sarana pelatihan, menyiapkan lembar evaluasi peserta, mendampingi sesi ice breaking, dan memfasilitasi kelompok kecil dalam simulasi studi kasus.',
+      'Ikut ngawal kelancaran belasan kelas dan seminar kepemimpinan, nyiapin game ice breaking biar kelas gak ngantuk, dan nemenin simulasi kelompok kecil.',
     achievements: [
-      'Mengoordinasikan kelancaran 12 program seminar dan workshop kepemimpinan mahasiswa.',
-      'Menyusun bank permainan ice breaking yang meningkatkan partisipasi aktif peserta hingga 50%.',
+      'Ngemudiin jalannya 12 acara seminar dan workshop mahasiswa biar acaranya tetap hidup dan tepat waktu.',
+      'Bikin bank game ice breaking seru yang sukses bikin suasana kelas jadi akrab dan gak canggung.',
     ],
-    skills: ['Koordinasi Acara', 'Evaluasi Pelatihan', 'Manajemen Kelas', 'Ice Breaking', 'Komunikasi Antar Personal'],
+    skills: ['Koordinasi Acara', 'Evaluasi Kelas', 'Manajemen Suasana', 'Ice Breaking', 'Komunikasi Santai'],
   },
 ];
 
@@ -382,8 +382,8 @@ export const TRAINING_STATS: TrainingStat[] = [
     value: '280+',
     numericValue: 280,
     suffix: '+',
-    label: 'Peserta Pelatihan Terbimbing',
-    subtext: 'Mahasiswa, staf organisasi, dan profesional muda yang mengasah keterampilan komunikasi.',
+    label: 'Teman Belajar',
+    subtext: 'Mahasiswa, staf tim, dan profesional muda yang berani mulai bicara di depan umum.',
     icon: 'Users',
   },
   {
@@ -391,8 +391,8 @@ export const TRAINING_STATS: TrainingStat[] = [
     value: '18+',
     numericValue: 18,
     suffix: '+',
-    label: 'Batch Workshop & Pelatihan',
-    subtext: 'Sesi workshop online maupun tatap muka langsung dengan pendekatan praktis interaktif.',
+    label: 'Batch & Sesi Seru',
+    subtext: 'Workshop tatap muka maupun online dengan suasana santai dan minim teori berbelit.',
     icon: 'GraduationCap',
   },
   {
@@ -400,8 +400,8 @@ export const TRAINING_STATS: TrainingStat[] = [
     value: '98.4%',
     numericValue: 98.4,
     suffix: '%',
-    label: 'Tingkat Kepuasan Peserta (CSAT)',
-    subtext: 'Rata-rata penilaian 4.92 / 5.00 pada aspek keramahan, kesabaran, dan kejelasan materi.',
+    label: 'Ulasan Positif',
+    subtext: 'Nilai rata-rata 4.92 / 5.00 untuk kejelasan materi, keramahan, dan suasana kelas yang nyaman.',
     icon: 'Star',
   },
   {
@@ -409,8 +409,8 @@ export const TRAINING_STATS: TrainingStat[] = [
     value: '100%',
     numericValue: 100,
     suffix: '%',
-    label: 'Praktik Interaktif Langsung',
-    subtext: 'Setiap peserta aktif berlatih dan mendapatkan umpan balik langsung di setiap sesi.',
+    label: 'Praktik Nyata',
+    subtext: 'Bukan cuma dengerin ceramah, setiap peserta langsung simulasi dan dapat masukan hangat.',
     icon: 'Building',
   },
 ];
@@ -460,56 +460,296 @@ export const TESTIMONIALS: Testimonial[] = [
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'post-1',
-    title: '5 Langkah Praktis Mengatasi Rasa Gugup dan "Blank" Saat Bicara di Depan Umum',
+    title: '5 Trik Mengatasi Rasa Gugup dan Pikiran "Blank" Saat Bicara di Depan Umum',
     slug: 'mengatasi-gugup-bicara-depan-umum',
     excerpt:
-      'Panduan sederhana untuk mengontrol detak jantung, rileksasi otot leher, dan menjaga alur pikiran tetap jernih saat berdiri di hadapan audiens.',
+      'Langkah praktis mengontrol detak jantung, rileksasi otot leher, dan menjaga alur pikiran tetap tenang saat berdiri di depan orang banyak.',
     publishedDate: '14 Maret 2026',
     readTime: '4 menit baca',
     category: 'Public Speaking',
     tags: ['PublicSpeaking', 'PercayaDiri', 'TipsPresentasi', 'Komunikasi'],
-    content: `Rasa gugup sebelum berbicara di depan banyak orang adalah reaksi biologis yang sangat wajar. Tubuh kita sedang mempersiapkan energi tambahan. Namun, jika tidak dikelola, rasa gugup bisa membuat pikiran "blank" mendadak.
+    content: `Rasa gugup sebelum berbicara di depan banyak orang adalah hal yang sangat wajar. Tubuh kita sedang melepaskan adrenalin tambahan. Namun, jika tidak dikelola dengan santai, rasa gugup bisa membuat pikiran "blank" mendadak.
 
-Berikut adalah 5 langkah praktis yang selalu saya bagikan kepada para peserta pelatihan:
+Berikut adalah 5 trik yang selalu saya bagikan kepada teman-teman peserta kelas:
 
 1. Kuasai Teknik Pernapasan 4-4-4
-Tarik napas perlahan melalui hidung selama 4 detik, tahan 4 detik, lalu hembuskan perlahan lewat mulut selama 4 detik. Lakukan 3-4 siklus tepat sebelum nama Anda dipanggil ke panggung untuk menurunkan ritme detak jantung.
+Tarik napas perlahan melalui hidung selama 4 detik, tahan 4 detik, lalu hembuskan perlahan lewat mulut selama 4 detik. Lakukan 3-4 kali tepat sebelum giliranmu bicara untuk menenangkan detak jantung.
 
-2. Fokus pada Audiens, Bukan pada Diri Sendiri
-Ketakutan muncul saat kita terlalu memikirkan: "Apakah saya terlihat konyol? Apakah jas saya rapi?" Ubah fokus Anda menjadi: "Informasi berharga apa yang ingin saya bagikan agar audiens terbantu hari ini?"
+2. Fokus Membantu Audiens, Bukan Memikirkan Diri Sendiri
+Gugup sering muncul saat kita terlalu sibuk bertanya ke diri sendiri: "Apakah penampilanku aneh? Apakah suaraku bergetar?" Balik fokusnya menjadi: "Hal bermanfaat apa yang bisa kubagikan agar teman-teman yang mendengarkan ini terbantu?"
 
-3. Jangan Menghafal Kata per Kata
-Menghafal kalimat demi kalimat adalah jalan pintas menuju rasa panik. Begitu Anda lupa 1 kata, seluruh kalimat berikutnya runtuh. Hafalkanlah "peta konsep" atau 3 poin utama yang ingin Anda sampaikan.
+3. Jangan Menghafal Kata Demi Kata
+Menghafal kalimat demi kalimat persis seperti teks buku adalah jebakan panik nomor satu. Saat lupa 1 kata, pikiran langsung macet. Hafalkan 3 poin inti atau alur ide ceritanya saja.
 
-4. 30 Detik Pertama yang Terlatih
-Latihlah kalimat pembuka Anda hingga fasih di luar kepala. Begitu Anda sukses melewati 30 detik pertama dengan tenang, sisa presentasi akan mengalir dengan sendirinya.
+4. Kuasai 30 Detik Pertama
+Latihlah kalimat pembukamu sampai lancar di luar kepala. Saat 30 detik pertama berhasil kamu lewati dengan senyuman dan nada rileks, sisa presentasimu akan mengalir jauh lebih ringan.
 
-5. Anggap Audiens Sebagai Sahabat Baru
-Tatap mata 2 atau 3 orang di barisan depan yang memiliki tatapan ramah. Jadikan mereka jangkar ketenangan Anda di awal sesi.`,
+5. Cari 2 Orang yang Menatap Ramah
+Tatap mata orang yang tersenyum atau mengangguk di barisan depan. Anggap mereka teman baikmu yang sedang antusias mendengarkan ceritamu.`,
   },
   {
     id: 'post-2',
-    title: 'Seni Memilih Ice Breaking yang Menyenangkan Tanpa Bikin Audiens Canggung',
-    slug: 'seni-ice-breaking-menyenangkan',
+    title: 'Rahasia Ice Breaking Asyik: Cara Mencairkan Suasana Tanpa Bikin Peserta Malu',
+    slug: 'rahasia-ice-breaking-asyik',
     excerpt:
-      'Cara fasilitator membaca dinamika ruangan dan memilih aktivitas pencair suasana yang relevan, berenergi, serta tidak membuat peserta merasa dipaksa.',
+      'Cara fasilitator membaca dinamika ruangan dan memilih aktivitas pencair suasana yang seru, hangat, dan tidak bikin peserta canggung.',
     publishedDate: '28 Februari 2026',
     readTime: '5 menit baca',
-    category: 'Fasilitasi Pelatihan',
-    tags: ['IceBreaking', 'Fasilitator', 'Workshop', 'ManajemenKelas'],
-    content: `Banyak peserta pelatihan merasa takut saat mendengar kata "ice breaking" karena khawatir disuruh melakukan hal-hal yang memalukan atau tidak ada hubungannya dengan topik pelatihan.
+    category: 'Fasilitasi & Kelas',
+    tags: ['IceBreaking', 'Fasilitator', 'Komunikasi'],
+    content: `Banyak orang merasa ngeri saat mendengar kata "ice breaking" karena takut dipaksa joget di depan umum atau disuruh melakukan hal-hal yang memalukan.
 
-Fasilitator yang andal memahami bahwa tujuan ice breaking adalah:
-- Membangun rasa aman secara psikologis di ruangan
-- Mengaktifkan fokus dan konsentrasi peserta
-- Menghubungkan peserta satu sama lain secara wajar
+Sebagai fasilitator atau pemateri, tugas kita adalah membuat suasana kelas terasa aman dan menyenangkan, bukan membuat orang merasa tertekan.
 
-Prinsip Ice Breaking yang Berhasil:
-1. Sederhana dalam Instruksi: Jangan pilih permainan yang membutuhkan penjelasan peraturan lebih dari 1 menit. Jika instruksinya rumit, energi peserta akan habis sebelum game dimulai.
-2. Tidak Ada yang Dipermalukan: Hindari game dengan hukuman coret muka atau sanksi memalukan. Berikan apresiasi kepada seluruh partisipan.
-3. Selalu Lakukan Debrief Singkat: Hubungkan aktivitas tersebut dengan materi. Misalnya, game menyusun kata bisa dijadikan pengantar untuk materi koordinasi tim.
+3 Kunci Ice Breaking yang Disukai Peserta:
+1. Penjelasan Singkat (Di Bawah 1 Menit)
+Jangan pilih game yang peraturannya berbelit-belit. Kalau instruksinya saja butuh 5 menit, semangat peserta keburu hilang sebelum game dimulai.
 
-Dengan pendekatan yang tepat, ice breaking menjadi jembatan ampuh untuk membuka gerbang partisipasi aktif peserta sepanjang sesi pelatihan.`,
+2. Tanpa Hukuman yang Memalukan
+Hindari hukuman coret muka, joget konyol, atau sanksi yang bikin peserta introvert merasa risih. Gantilah dengan apresiasi hangat bagi semua yang ikut serta.
+
+3. Hubungkan Game ke Materi Pembelajaran
+Ice breaking yang bagus punya jembatan makna. Misalnya, game menyusun kata bisa dijadikan refleksi betapa pentingnya kejelasan instruksi dalam komunikasi tim.
+
+Dengan begitu, peserta tidak hanya tertawa lepas, tapi juga langsung siap masuk ke materi inti dengan pikiran segar.`,
+  },
+  {
+    id: 'post-3',
+    title: 'Menyusun Alur Materi Pelatihan: Dari Pembuka Menarik Sampai Penutup Berkesan',
+    slug: 'menyusun-alur-materi-pelatihan',
+    excerpt:
+      'Struktur 3 babak sederhana yang bikin peserta tetap antusias menyimak dari menit pertama hingga akhir sesi tanpa rasa bosan.',
+    publishedDate: '15 Februari 2026',
+    readTime: '6 menit baca',
+    category: 'Desain Pelatihan',
+    tags: ['Fasilitator', 'TipsPresentasi', 'PublicSpeaking'],
+    content: `Pernahkah kamu ikut sesi pelatihan di mana pematerinya pintar sekali, tapi kamu merasa mengantuk dan tersesat di tengah jalan? Sering kali masalahnya bukan di ilmunya, melainkan di cara menyusun alur ceritanya.
+
+Gunakan rumus struktur 3 babak ini untuk materi apa pun:
+
+1. Pembuka (Hook & Kenapa Ini Penting Bagi Mereka)
+Jangan langsung pamer gelar atau definisi teori yang tebal. Mulailah dengan cerita masalah nyata yang sering mereka hadapi sehari-hari, lalu tunjukkan apa untungnya buat mereka jika menyimak sesi ini sampai habis.
+
+2. Isi (Maksimal 3 Gagasan Utama dengan Contoh Nyata)
+Otak manusia sulit mengingat lebih dari 3 ide besar dalam satu sesi. Pecah materi menjadi 3 bagian sederhana. Untuk setiap bagian, berikan rumus: Penjelasan Singkat -> Contoh Nyata -> Latihan Ringan.
+
+3. Penutup (Rangkuman & Satu Aksi Kecil)
+Akhiri sesi bukan cuma dengan kata "sekian dan terima kasih". Berikan rangkuman ringkas 1 menit dan tantang peserta untuk melakukan satu tindakan nyata besok pagi.
+
+Ketika alur materimu rapi, kamu sebagai pembicara tidak akan kebingungan, dan peserta pulang dengan pemahaman yang utuh.`,
+  },
+  {
+    id: 'post-4',
+    title: 'Bicara Lebih Rileks: Cara Mengatur Pernapasan dan Intonasi Suara yang Enak Didengar',
+    slug: 'cara-mengatur-pernapasan-intonasi-suara',
+    excerpt:
+      'Teknik vokal sederhana agar suaramu tidak cepat serak, terdengar hangat, dan tidak membosankan saat berbicara di depan forum.',
+    publishedDate: '02 Februari 2026',
+    readTime: '4 menit baca',
+    category: 'Public Speaking',
+    tags: ['PublicSpeaking', 'PercayaDiri', 'Komunikasi'],
+    content: `Banyak pembicara yang baru 15 menit presentasi sudah merasa tenggorokannya kering dan kehabisan napas di ujung kalimat. Itu tanda bahwa kita masih bernapas dari dada, bukan dari diafragma.
+
+Berikut latihan vokal 5 menit sebelum naik panggung:
+
+1. Pernapasan Perut (Diafragma)
+Letakkan tangan di perut. Tarik napas sampai perut mengembang, bukan bahu yang terangkat. Hembuskan perlahan dengan desisan "sssshhhh". Ini membuat fondasi suaramu bulat dan tidak melengking.
+
+2. Bermain Tempo dan Jeda
+Jangan berbicara seperti kereta cepat tanpa rem. Berikan jeda 1-2 detik setelah kamu menyampaikan poin penting. Jeda memberikan waktu bagi audiens untuk mencerna, sekaligus memberi kesempatan bagi paru-parumu untuk mengambil napas baru.
+
+3. Hindari Nada Monoton
+Bayangkan intonasi suaramu seperti lagu, ada nada tinggi saat bersemangat, nada sedang saat menjelaskan, dan nada rendah yang tenang saat memberikan kesimpulan penting.`,
+  },
+  {
+    id: 'post-5',
+    title: 'Tips Bikin Slide Presentasi yang Bersih, Nyaman Dilihat, dan Gampang Dipahami',
+    slug: 'tips-bikin-slide-presentasi-bersih',
+    excerpt:
+      'Trik menyederhanakan slide presentasi agar tidak penuh dengan teks semrawut dan tetap berfokus pada pesan utamamu.',
+    publishedDate: '20 Januari 2026',
+    readTime: '5 menit baca',
+    category: 'Tips Presentasi',
+    tags: ['TipsPresentasi', 'Komunikasi', 'PublicSpeaking'],
+    content: `Slide presentasi adalah alat bantu visual, bukan contekan naskah yang harus dibaca kata demi kata oleh pembicara.
+
+Prinsip Sederhana Membuat Slide yang Nyaman:
+
+1. Aturan Satu Ide per Slide
+Jika ada dua topik berbeda, pisahkan menjadi dua slide. Lebih baik punya 15 slide yang bersih dan berganti cepat, daripada 5 slide yang penuh sesak seperti koran.
+
+2. Kurangi Teks Paragraf, Pakai Kata Kunci
+Audiens tidak bisa membaca paragraf panjang sekaligus mendengarkan suaramu secara bersamaan. Ambil inti sari kata kuncinya saja, biar suaramu yang menjelaskan rinciannya.
+
+3. Kontras Warna yang Jelas
+Gunakan latar belakang bersih (seperti putih atau abu-abu terang) dengan tulisan gelap yang kontras. Hindari warna teks yang mirip dengan warna latar karena bikin mata cepat lelah.
+
+Ketika slide-mu bersih, perhatian audiens akan kembali tertuju kepadamu sebagai pembicara utama.`,
+  },
+  {
+    id: 'post-6',
+    title: 'Menghadapi Pertanyaan Sulit di Tengah Presentasi Tanpa Panik',
+    slug: 'menghadapi-pertanyaan-sulit-tanpa-panik',
+    excerpt:
+      'Cara cerdas menjawab pertanyaan tak terduga dengan tenang, profesional, dan tetap menjaga kendali ruang kelas.',
+    publishedDate: '10 Januari 2026',
+    readTime: '4 menit baca',
+    category: 'Public Speaking',
+    tags: ['PercayaDiri', 'PublicSpeaking', 'TipsPresentasi'],
+    content: `Salah satu ketakutan terbesar saat presentasi adalah ketika seseorang di ruangan mengajukan pertanyaan yang kita tidak tahu jawabannya.
+
+Ingat satu hal: Sebagai pembicara, kamu tidak dituntut menjadi ensiklopedia berjalan yang tahu segala hal di dunia.
+
+Langkah Menjawab dengan Tenang:
+1. Dengarkan Sampai Selesai & Beri Apresiasi
+Jangan potong pertanyaan orang. Setelah selesai, katakan: "Pertanyaan yang sangat bagus dan jeli, terima kasih sudah menanyakannya."
+
+2. Ulangi Inti Pertanyaannya
+Mengulangi pertanyaan memastikan seluruh ruangan mendengar, sekaligus memberimu waktu 3-5 detik ekstra untuk berpikir dengan jernih.
+
+3. Jika Memang Belum Tahu, Akui dengan Elegan
+Katakan dengan jujur: "Untuk data spesifik tersebut, saya belum memegangnya saat ini. Boleh minta kontakmu nanti supaya saya kirimkan referensi lengkapnya setelah sesi ini?" Sikap jujur jauh lebih dihargai daripada mengarang jawaban asal-asalan.`,
+  },
+  {
+    id: 'post-7',
+    title: '3 Game Singkat 3 Menit yang Langsung Bikin Kelas Mengantuk Jadi Melek Lagi',
+    slug: '3-game-singkat-penghilang-ngantuk',
+    excerpt:
+      'Aktivitas energizer praktis tanpa alat ribet untuk menghidupkan kembali suasana kelas setelah jam makan siang.',
+    publishedDate: '26 Desember 2025',
+    readTime: '4 menit baca',
+    category: 'Ice Breaking',
+    tags: ['IceBreaking', 'Fasilitator', 'PercayaDiri'],
+    content: `Jam rawan dalam sesi pelatihan biasanya adalah pukul 13.30 sampai 14.30 WIB, tepat setelah makan siang. Kalau kamu paksakan langsung materi berat, mata peserta akan mulai redup satu per satu.
+
+Berikut 3 game cepat yang bisa kamu pakai:
+
+1. Game "Tepuk Ganjil Genap"
+Minta seluruh peserta berdiri. Jika fasilitator menyebut angka ganjil, mereka tepuk 1x. Jika angka genap, mereka melompat kecil di tempat. Permainan refleks sederhana ini mengalirkan darah kembali ke otak dalam 2 menit.
+
+2. Game "Tebak Kata Tanpa Suara"
+Bagi peserta berpasangan. Satu orang memeragakan satu kata terkait topik kelas hanya dengan gerakan tubuh, pasangannya menebak dalam 30 detik. Tawa yang pecah seketika melenyapkan rasa kantuk.
+
+3. Peregangan "Pohon Tertimpa Angin"
+Instruksikan peserta merentangkan tangan ke atas dan condong ke kanan-kiri bersama-sama. Gerakan fisik ringan terbukti secara ilmiah mengembalikan pasokan oksigen ke paru-paru.`,
+  },
+  {
+    id: 'post-8',
+    title: 'Seni Mendengarkan Aktif: Cara Bikin Lawan Bicara Merasa Dihargai Sepenuhnya',
+    slug: 'seni-mendengarkan-aktif-komunikasi',
+    excerpt:
+      'Kunci komunikasi bukan cuma pandai merangkai kata, tapi kesediaan membuka telinga dan hati untuk memahami orang lain.',
+    publishedDate: '12 Desember 2025',
+    readTime: '5 menit baca',
+    category: 'Komunikasi Efektif',
+    tags: ['Komunikasi', 'PercayaDiri', 'Fasilitator'],
+    content: `Sebagian besar masalah dalam tim kantor atau organisasi bukan karena kurang bicara, melainkan karena semua orang sibuk memikirkan apa yang mau mereka katakan selanjutnya tanpa benar-benar menyimak.
+
+Prinsip Mendengarkan Aktif (Active Listening):
+- Letakkan Gawai & Berikan Kontak Mata Hangat
+Ketika orang lain sedang berbicara, jauhkan layar ponsel. Hadirlah seutuhnya di momen tersebut.
+
+- Jangan Memotong Kalimat
+Tahan dorongan untuk langsung menyanggah atau memberi saran sebelum lawan bicaramu menyelesaikan kalimatnya secara utuh.
+
+- Gunakan Parafrasa Konfirmasi
+Setelah mereka selesai, cobalah konfirmasi dengan lembut: "Jadi maksudmu seperti ini ya... apakah pemahamanku sudah tepat?" Kalimat ini menunjukkan bahwa kamu benar-benar peduli pada apa yang mereka sampaikan.`,
+  },
+  {
+    id: 'post-9',
+    title: 'Bahasa Tubuh yang Bikin Kamu Terlihat Ramah Sekaligus Meyakinkan di Panggung',
+    slug: 'bahasa-tubuh-ramah-dan-meyakinkan',
+    excerpt:
+      'Panduan posisi tangan, tatapan mata, dan cara berdiri yang memancarkan ketenangan serta keterbukaan kepada audiens.',
+    publishedDate: '28 November 2025',
+    readTime: '5 menit baca',
+    category: 'Public Speaking',
+    tags: ['PublicSpeaking', 'PercayaDiri', 'TipsPresentasi'],
+    content: `Sebelum kamu mengucapkan sepatah kata pun di panggung, audiens sudah membaca pesan lewat bahasa tubuhmu.
+
+Hindari Kebiasaan Ini:
+- Tangan masuk ke dalam saku celana terus-menerus (terkesan menyembunyikan sesuatu atau acuh).
+- Melipat tangan di dada (terkesan defensif atau tertutup).
+- Mondar-mandir tanpa tujuan jelas seperti orang resah.
+
+Coba Terapkan Gestur Ini:
+1. Posisi Berdiri Segitiga Kokoh
+Buka kaki selebar bahu. Tumpuan badan seimbang di kedua kaki agar kamu tidak bergoyang ke kanan dan kiri.
+
+2. Posisi Tangan di "Area Kotak Kejujuran"
+Biarkan tangan terbuka di area antara pusar dan dada. Gunakan telapak tangan terbuka saat menjelaskan ide untuk memberikan kesan ramah dan terbuka.
+
+3. Senyum Hangat Tulus di 5 Detik Pertama
+Senyuman pertama yang tulus langsung mencairkan dinding jarak antara kamu dan audiens.`,
+  },
+  {
+    id: 'post-10',
+    title: 'Cara Mengajak Peserta yang Pendiam Supaya Mau Ikut Terlibat Tanpa Dipaksa',
+    slug: 'mengajak-peserta-pendiam-terlibat',
+    excerpt:
+      'Trik fasilitator mendekati peserta introvert dengan cara yang santai, aman, dan tanpa rasa terintimidasi.',
+    publishedDate: '15 November 2025',
+    readTime: '4 menit baca',
+    category: 'Fasilitasi & Kelas',
+    tags: ['Fasilitator', 'IceBreaking', 'Komunikasi'],
+    content: `Di hampir setiap kelas pelatihan, selalu ada peserta yang duduk paling belakang dan sangat hemat bicara. Bukan karena mereka tidak peduli, tapi sering kali karena mereka butuh waktu untuk merasa aman di lingkungan baru.
+
+Cara Melibatkan Mereka Secara Nyaman:
+1. Gunakan Format Diskusi Berpasangan (Think-Pair-Share)
+Daripada langsung menembak pertanyaan ke forum besar, minta mereka mengobrol dulu dengan teman di sebelahnya selama 2 menit. Setelah itu, baru minta salah satu pasangan membagikan obrolannya. Berbicara berdua jauh lebih ringan daripada bicara di depan 30 orang.
+
+2. Berikan Pilihan Media Tertulis
+Sediakan sticky notes atau kuis interaktif ponsel. Orang yang pemalu saat bicara lisan sering kali punya pemikiran paling mendalam saat menuliskan ide.
+
+3. Hargai Jawaban Kecil Mereka
+Saat mereka mulai berani berpendapat, berikan apresiasi tulus. Ini membangun rasa percaya diri mereka untuk sesi-sesi berikutnya.`,
+  },
+  {
+    id: 'post-11',
+    title: 'Membuka Presentasi dalam 30 Detik Pertama: Trik Hook yang Bikin Orang Langsung Noleh',
+    slug: 'trik-hook-pembuka-presentasi-30-detik',
+    excerpt:
+      '3 formula kalimat pembuka yang langsung merebut perhatian audiens daripada sekadar perkenalan nama yang membosankan.',
+    publishedDate: '01 November 2025',
+    readTime: '4 menit baca',
+    category: 'Public Speaking',
+    tags: ['PublicSpeaking', 'TipsPresentasi', 'PercayaDiri'],
+    content: `Kebanyakan orang membuka presentasi dengan gaya yang sangat standar: "Selamat pagi semuanya, nama saya Budi, hari ini saya akan mempresentasikan tentang topik X."
+
+Gaya pembuka seperti itu sering membuat audiens langsung melirik ke layar ponsel mereka.
+
+Coba Gunakan 3 Formula Hook Ini:
+
+1. Lempar Pertanyaan Imajinasi
+"Pernahkah kamu merasa sudah menyiapkan materi presentasi berhari-hari, tapi begitu berdiri di panggung tiba-tiba semua ide hilang begitu saja?" Semua orang yang pernah mengalaminya akan langsung mengangguk dan memperhatikanmu.
+
+2. Mulai dengan Fakta Mengejutkan
+"Tahukah kamu, survei membuktikan bahwa ketakutan nomor satu bagi banyak orang bukanlah kematian, melainkan berbicara di hadapan orang banyak?"
+
+3. Buka dengan Cerita Singkat Beremosi
+"Tiga tahun lalu, saya pernah berdiri di panggung ini dengan lutut yang gemetar hebat sampai kartu catatan saya jatuh ke lantai..." Cerita pribadi yang jujur selalu menarik empati audiens secara instan.`,
+  },
+  {
+    id: 'post-12',
+    title: 'Ice Breaking Santai untuk Kelas Online Zoom atau Google Meet yang Seru',
+    slug: 'ice-breaking-santai-kelas-online',
+    excerpt:
+      'Ide permainan virtual interaktif tanpa perlu instal aplikasi tambahan yang bikin peserta online aktif menyalakan kamera.',
+    publishedDate: '18 Oktober 2025',
+    readTime: '5 menit baca',
+    category: 'Ice Breaking Virtual',
+    tags: ['IceBreaking', 'Fasilitator', 'Komunikasi'],
+    content: `Tantangan terbesar kelas online (Zoom atau Google Meet) adalah layar hitam di mana hampir semua peserta mematikan kamera dan mikrofon.
+
+Berikut 2 game online sederhana yang terbukti ampuh:
+
+1. Game "Tunjukkan Benda Berwarna Biru di Mejamu"
+Beri waktu 30 detik bagi semua peserta untuk mencari benda berwarna tertentu di dekat mereka lalu menunjukkannya ke kamera. Seketika layar akan penuh dengan peserta yang tersenyum memperlihatkan cangkir, buku, atau bolpoin mereka.
+
+2. Kuis Cepat di Kolom Chat
+Ajukan pertanyaan lucu dan santai di kolom chat, misalnya: "Jika kamu harus makan satu jenis makanan seumur hidup, kamu pilih mi instan atau nasi goreng?" Mintalah mereka mengetik serentak dalam hitungan ketiga. Obrolan di chat langsung ramai dan akrab.
+
+Begitu rasa canggung di ruang virtual mencair, penyampaian materi online akan terasa jauh lebih hidup dan dua arah.`,
   },
 ];
 
@@ -518,7 +758,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-1',
     title: 'Dokumentasi Akbar: Program Sinergi & Pengembangan Talenta',
     description: 'Foto bersama outdoor puluhan peserta pelatihan dan fasilitator dalam balutan seragam polo marun, menandai penutupan sesi sinergi tim.',
-    imageUrl: '/images/IMG_1897.jpeg',
+    quote: 'Energi kebersamaan itu menular; begitu satu orang berani tersenyum dan membuka diri, seisi ruangan ikut terhubung.',
+    shortStory: 'Sesi luar ruangan ini membuktikan bahwa batas kaku antardivisi bisa runtuh hanya dalam beberapa jam permainan kolaboratif. Di awal pagi, peserta masih bergerombol dengan rekan satu divisi masing-masing. Namun setelah serangkaian simulasi pemecahan masalah dan tantangan kekompakan tanpa sekat jabatan, tawa lepas dan kerja sama mengalir alami. Momen penutupan dengan foto bersama 50+ peserta berseragam polo marun ini menjadi saksi bahwa sinergi sejati tumbuh saat kita berani saling percaya.',
+    takeaway: 'Komunikasi tim yang sehat berawal dari ruang aman di mana setiap orang merasa setara dan didengar tanpa rasa takut dihakimi.',
+    imageUrl: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=80',
     category: 'corporate',
     date: 'Maret 2026',
     location: 'Area Outdoor Pelatihan, Bandung',
@@ -530,7 +774,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-2',
     title: 'Pelatihan ASB: Manajemen Tim Efektif & Sinergi',
     description: 'Sesi pelatihan in-house di ruang training korporat dengan pemaparan strategi komunikasi kepemimpinan dan manajemen tim efektif.',
-    imageUrl: '/images/IMG_1896.jpeg',
+    quote: 'Pemimpin yang hebat bukan yang paling banyak bicara, melainkan yang paling jeli mendengarkan kebutuhan timnya.',
+    shortStory: 'Dalam sesi in-house training ini, fokus utama kami adalah merombak gaya rapat yang biasanya tegang menjadi ruang diskusi yang cair dan solutif. Melalui simulasi peran (roleplay), para team lead belajar menyampaikan masukan dengan empati, mendengarkan aktif tanpa menyela, dan merangkum kesimpulan dengan jelas dalam 60 detik. Peserta mengaku dinamika kerja harian mereka langsung berubah lebih suportif setelah kelas ini.',
+    takeaway: 'Gunakan rumus apresiasi dulu, baru kemudian jelaskan solusi konkret. Percakapan tersulit pun akan terasa jauh lebih ringan.',
+    imageUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80',
     category: 'corporate',
     date: 'Februari 2026',
     location: 'Corporate Training Hall, Jakarta',
@@ -542,7 +790,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-3',
     title: 'Workshop Public Speaking: Olah Vokal & Gestur',
     description: 'Sesi interaktif fasilitator memandu teknik artikulasi, kontak mata, dan penggunaan bahasa tubuh terbuka di hadapan peserta meja U-Shape.',
-    imageUrl: '/images/IMG_1895.jpeg',
+    quote: 'Gemetar itu wajar, tapi suara yang bulat dan tatapan mata yang hangat bisa dilatih sampai jadi kebiasaan alami.',
+    shortStory: 'Di kelas meja U-Shape ini, setiap peserta mendapat panggung aman untuk mempraktikkan olah vokal diafragma dan bahasa tubuh terbuka. Salah satu peserta yang awalnya mengaku tangannya selalu berkeringat dingin saat memegang mikrofon, berhasil membawakan pembuka presentasi 2 menit dengan nada tenang dan meyakinkan setelah mencoba latihan pernapasan 4-4-4 bersama Alfi.',
+    takeaway: 'Kuasai 30 detik pertama dengan napas perut dan kontak mata ramah. 90% rasa panik panggung akan mereda seketika.',
+    imageUrl: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1200&q=80',
     category: 'corporate',
     date: 'Februari 2026',
     location: 'Ruang Seminar Modern, Jakarta',
@@ -554,7 +806,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-4',
     title: 'Sesi Kelulusan Batch Workshop Komunikasi Korporat',
     description: 'Momen kebersamaan peserta dan trainer seusai simulasi presentasi akhir batch pelatihan komunikasi efektif internal.',
-    imageUrl: '/images/IMG_1894.jpeg',
+    quote: 'Kelulusan bukan garis akhir, melainkan awal keberanian untuk bersuara lantang di meja-meja keputusan kantor.',
+    shortStory: 'Momen kelulusan batch ini selalu menggetarkan hati. Selama 3 minggu pelatihan intensif, peserta melewati tantangan dari presentasi 1 lawan 1 hingga simulasi pitching di hadapan manajemen. Melihat transformasi dari yang awalnya cemas menjadi percaya diri saat memaparkan ide di panggung penutupan adalah hadiah terbaik bagi seorang fasilitator.',
+    takeaway: 'Rasa percaya diri bukan hadiah sulap semalam, melainkan buah dari latihan kecil yang diulang secara konsisten.',
+    imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80',
     category: 'corporate',
     date: 'Januari 2026',
     location: 'Training Room Perusahaan, Jakarta Selatan',
@@ -566,7 +822,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-5',
     title: 'Konsolidasi Tim & Workshop Budaya Kerja Positif',
     description: 'Sesi diskusi kelompok dan sharing session yang diakhiri foto bersama ceria penuh semangat kolaborasi di ruang rapat kantor.',
-    imageUrl: '/images/IMG_1893.jpeg',
+    quote: 'Suasana kerja yang asik bukan kebetulan, tapi hasil kesepakatan sadar untuk saling menghargai ide-ide kecil.',
+    shortStory: 'Sesi konsolidasi tim di innovation lounge ini membongkar hambatan komunikasi tak terlihat antarbagian. Dengan metode sticky notes anonim dan diskusi melingkar santai, tim berhasil menumpahkan ganjalan pekerjaan secara konstruktif dan pulang dengan senyuman serta komitmen baru yang menyatukan mereka.',
+    takeaway: 'Kepercayaan tim tumbuh saat komunikasi tidak hanya berisi instruksi tugas, tetapi juga perhatian personal yang tulus.',
+    imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80',
     category: 'bootcamp',
     date: 'Januari 2026',
     location: 'Innovation Office Lounge, Jakarta',
@@ -578,7 +838,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-6',
     title: 'Presentasi Strategis & Evaluasi Dinamika Tim',
     description: 'Diskusi meja bundar dan pemaparan di whiteboard untuk menganalisis hambatan komunikasi internal dan menyusun peta solusi.',
-    imageUrl: '/images/IMG_1892.jpeg',
+    quote: 'Ide yang brilian akan sia-sia jika dibungkus dengan cara komunikasi yang rumit dan berputar-putar.',
+    shortStory: 'Di sesi ruang rapat eksekutif ini, kami membedah whiteboard interaktif untuk menyederhanakan data angka yang rumit menjadi narasi visual yang renyah dipahami. Peserta diajak berpikir dari sudut pandang pendengar: "Apa manfaat ide ini untuk kelanjutan operasional kita besok pagi?"',
+    takeaway: 'Sederhanakan pesanmu sampai anak usia 12 tahun pun paham intisarinya. Kejelasan adalah bentuk tertinggi dari keahlian.',
+    imageUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80',
     category: 'corporate',
     date: 'Desember 2025',
     location: 'Executive Boardroom, Jakarta Pusat',
@@ -590,7 +854,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-7',
     title: 'Diskusi Kolaboratif & Pemecahan Masalah Kelompok',
     description: 'Praktikum kelompok kecil menggunakan media tablet dan laptop dalam menganalisis studi kasus komunikasi antardivisi.',
-    imageUrl: '/images/IMG_1891.jpeg',
+    quote: 'Dua kepala yang saling mendukung selalu menghasilkan ide yang jauh lebih cerdas dibanding satu kepala yang egois.',
+    shortStory: 'Peserta bootcamp dibagi menjadi kelompok kecil beranggotakan 4-5 orang untuk memecahkan kasus krisis komunikasi di dunia nyata. Dalam 45 menit praktikum, mereka belajar membagi peran juru bicara, merumuskan poin argumen, dan saling melengkapi masukan tanpa ada yang mendominasi pembicaraan.',
+    takeaway: 'Kolaborasi sejati adalah seni meramu sudut pandang yang berbeda menjadi satu melodi solusi yang harmonis.',
+    imageUrl: 'https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=1200&q=80',
     category: 'bootcamp',
     date: 'Desember 2025',
     location: 'Creative Learning Space, Tangerang',
@@ -602,7 +870,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-8',
     title: 'Seminar Binar Academy: Komunikasi & Fasilitasi Digital',
     description: 'Sesi seminar inspiratif di panggung auditorium membahas pentingnya keterampilan komunikasi manusiawi di era transformasi digital.',
-    imageUrl: '/images/IMG_1890.jpeg',
+    quote: 'Di era digital yang serba cepat, kehangatan manusiawi dalam berkomunikasi justru menjadi keunggulan paling mahal.',
+    shortStory: 'Berdiri di depan puluhan talenta digital Binar Academy, kami mengupas seni mempertahankan perhatian audiens di dunia yang penuh distraksi notifikasi gawai. Kuncinya adalah interaktivitas berkelanjutan: libatkan mereka setiap 3-4 menit dengan pertanyaan reflektif atau kuis cepat.',
+    takeaway: 'Jangan jadikan audiens penonton pasif. Jadikan mereka rekan seperjalanan dalam petualangan cerita presentasimu.',
+    imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80',
     category: 'university',
     date: 'November 2025',
     location: 'Auditorium Binar Academy, Jakarta',
@@ -614,7 +886,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-9',
     title: 'Customer Journey Mapping & Interaksi Konsumen',
     description: 'Fasilitasi pemetaan diagram alur pengalaman pelanggan pada flipchart dengan pelibatan aktif seluruh anggota kelompok.',
-    imageUrl: '/images/IMG_1889.jpeg',
+    quote: 'Mendengarkan keluhan konsumen dengan tulus adalah langkah awal membangun kesetiaan tanpa syarat.',
+    shortStory: 'Fasilitasi flipchart visual ini memandu tim customer experience memetakan titik-titik emosi pelanggan saat berinteraksi dengan layanan. Dari momen bingung hingga lega, peserta belajar memilih kata-kata empati yang tepat untuk meredakan kekecewaan konsumen di lapangan.',
+    takeaway: 'Empati bukan sekadar berkata "kami mengerti", tetapi hadir mencari solusi konkret dengan nada suara yang tenang.',
+    imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80',
     category: 'corporate',
     date: 'November 2025',
     location: 'Meeting Room Korporasi, Jakarta',
@@ -626,7 +902,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-10',
     title: 'Teknik Gestur Panggung & Bahasa Tubuh',
     description: 'Pelatihan teknik komunikasi non-verbal, olah vokal, dan kontrol panggung untuk tampil memikat dan meyakinkan di depan umum.',
-    imageUrl: '/images/IMG_1888.jpeg',
+    quote: 'Tubuhmu berbicara lebih dulu sebelum bibirmu sempat mengeluarkan kata pertama di atas panggung.',
+    shortStory: 'Di kelas ini, kami melatih gestur kotak kejujuran (open palm gestures) dan postur berdiri kokoh segitiga. Peserta yang terbiasa memasukkan tangan ke saku celana atau melipat tangan di dada diajak merasakan betapa gestur terbuka langsung membuat audiens merasa disambut dengan hangat.',
+    takeaway: 'Biarkan telapak tanganmu terbuka menghadap ke depan. Itu sinyal universal alam bawah sadar bahwa kamu tulus dan dapat dipercaya.',
+    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80',
     category: 'university',
     date: 'Oktober 2025',
     location: 'Ruang Kelas Pelatihan, Bandung',
@@ -638,7 +918,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-11',
     title: 'Circle Forum: Sesi Berbagi Pengalaman & Refleksi Kelas',
     description: 'Metode forum melingkar santai tanpa sekat meja untuk mendorong keterbukaan emosional dan active listening antar peserta.',
-    imageUrl: '/images/IMG_1886.jpeg',
+    quote: 'Saat lingkaran dibentuk tanpa meja pembatas, ego runtuh dan kejujuran hati mulai berbicara.',
+    shortStory: 'Metode forum melingkar santai di ruang terbuka Yogyakarta ini menjadi salah satu sesi paling menyentuh. Tanpa panggung dan tanpa mikrofon, peserta bergantian menceritakan kegagalan dan ketakutan terbesar mereka saat memimpin. Ruangan hening, penuh rasa hormat, dan diakhiri dengan tepuk tangan saling menguatkan.',
+    takeaway: 'Kerapuhan (vulnerability) bukan tanda kelemahan, melainkan jembatan terkuat untuk membangun persaudaraan sejati.',
+    imageUrl: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=80',
     category: 'bootcamp',
     date: 'Oktober 2025',
     location: 'Open Space Center, Yogyakarta',
@@ -650,7 +934,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-12',
     title: 'Maxwell Leadership Session: Kepemimpinan Berkarakter',
     description: 'Workshop eksklusif Maxwell Leadership yang dihadiri para profesional dan eksekutif untuk memperkuat karakter kepemimpinan.',
-    imageUrl: '/images/IMG_1883.jpeg',
+    quote: 'Kepemimpinan bukan tentang gelar jabatan di kartu nama, melainkan pengaruh positif yang kita tinggalkan di hati orang lain.',
+    shortStory: 'Sesi eksklusif bersama para profesional dan eksekutif ini menggali 5 tingkatan kepemimpinan John C. Maxwell. Kami membedah bagaimana seorang leader memfasilitasi dialog dua arah dengan tim bawahan agar mereka merasa diberdayakan, bukan sekadar diperintah.',
+    takeaway: 'Orang tidak peduli seberapa banyak kamu tahu, sampai mereka tahu seberapa besar kamu peduli pada mereka.',
+    imageUrl: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1200&q=80',
     category: 'conference',
     date: 'September 2025',
     location: 'Function Room Hotel Bintang 5, Surabaya',
@@ -662,7 +950,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-13',
     title: 'Keynote Speech: Menguasai Panggung di Depan Ratusan Audiens',
     description: 'Pemaparan akbar di podium seminar hall mengenai seni public speaking yang sistematis, runtut, dan berdampak kuat.',
-    imageUrl: '/images/IMG_1884.jpeg',
+    quote: 'Panggung besar bukan untuk menakut-nakuti, melainkan corong pengeras agar pesan kebaikanmu terdengar lebih luas.',
+    shortStory: 'Di hadapan 150+ delegasi di grand convention hall Jakarta, pemaparan berdurasi 45 menit ini mengalir dinamis dengan slide visual minimalis dan cerita interaktif. Ketika seluruh ruangan serentak berdiri mengikuti simulasi gerakan vokal bersama, energi positifnya terasa menggetarkan seisi ruangan.',
+    takeaway: 'Kuasai cerita pribadimu. Statistik membuat orang berpikir, tapi cerita tuluslah yang menggerakkan orang untuk bertindak.',
+    imageUrl: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80',
     category: 'conference',
     date: 'September 2025',
     location: 'Grand Convention Hall, Jakarta',
@@ -674,7 +966,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-14',
     title: 'Workshop Sales: Jurus Lengkap Menjual Pelengkap Garansi',
     description: 'Sesi pelatihan intensif komunikasi persuasi dan penanganan keberatan bagi tim sales lapangan korporasi ritel.',
-    imageUrl: '/images/IMG_1885.jpeg',
+    quote: 'Menjual bukan memaksa orang membeli, melainkan mengedukasi mereka agar terhindar dari risiko kerugian.',
+    shortStory: 'Pelatihan sales lapangan di Surabaya ini menekankan teknik komunikasi persuasi berbasis solusi perlindungan. Tim sales diajak berlatih mengajukan pertanyaan pembuka yang menggali kekhawatiran pembeli gawai, alih-alih langsung mendesak dengan brosur promo yang melelahkan.',
+    takeaway: 'Tanyakan kebutuhan mereka dulu. Penjualan yang berhasil selalu dimulai dari rasa ingin menolong, bukan target angka semata.',
+    imageUrl: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80',
     category: 'corporate',
     date: 'Agustus 2025',
     location: 'Ballroom Hotel Hartono, Surabaya',
@@ -686,7 +982,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-15',
     title: 'Praktikum Dinamika Tim & Simulasi Lapangan',
     description: 'Sesi pemecahan masalah kolaboratif di mana tim bekerja sama menyelesaikan tantangan terstruktur dengan bimbingan fasilitator.',
-    imageUrl: '/images/IMG_1882.jpeg',
+    quote: 'Tantangan kelompok mengajarkan kita bahwa hasil terbaik diraih saat setiap anggota menyumbangkan kelebihannya.',
+    shortStory: 'Di sesi praktikum studio Depok ini, peserta ditantang menyusun menara komunikasi menggunakan bahan sederhana dalam waktu terbatas. Simulasi ini melatih koordinasi pembagian tugas, mendengarkan instruksi di bawah tekanan waktu, dan cara tetap tenang serta saling mendukung saat rencana awal gagal.',
+    takeaway: 'Saat situasi darurat melanda, nada suara yang tenang dan instruksi yang terstruktur jauh lebih berharga daripada kepanikan.',
+    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
     category: 'bootcamp',
     date: 'Juli 2025',
     location: 'Workshop Studio, Depok',
@@ -698,7 +998,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-16',
     title: 'Temu Karyawan & Gathering Sinergi Antar Divisi',
     description: 'Sesi gathering akbar korporasi dengan ratusan karyawan, dimeriahkan ice breaking massal dan pembekalan motivasi kerja.',
-    imageUrl: '/images/IMG_1881.jpeg',
+    quote: 'Kapal yang besar hanya bisa melaju cepat jika semua pendayung mengayuh ke arah mata angin yang sama.',
+    shortStory: 'Momen kebersamaan 80+ karyawan di hall pertemuan Jakarta ini diisi dengan refleksi perjalanan perusahaan dan apresiasi peran setiap lini kerja. Dari staf pendukung hingga manajer, semua larut dalam sesi komitmen bersama untuk saling menyemangati menghadapi target tahun depan.',
+    takeaway: 'Rayakan kemenangan-kemenangan kecil timmu. Pengakuan yang tulus membakar semangat kerja jauh lebih lama daripada tuntutan.',
+    imageUrl: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
     category: 'corporate',
     date: 'Juli 2025',
     location: 'Hall Pertemuan Telkom, Jakarta',
@@ -710,13 +1014,49 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-17',
     title: 'Sesi Energizer, Ice Breaking, & Team Harmony',
     description: 'Aktivitas santai di ruang studio berlantai kayu untuk mencairkan ketegangan, membangun keakraban, dan melatih kekompakan gerak.',
-    imageUrl: '/images/IMG_1880.jpeg',
+    quote: 'Ketika tubuh bergerak bebas dan pikiran rileks, kreativitas yang terpendam akan menyembul keluar tanpa dipaksa.',
+    shortStory: 'Di studio berlantai kayu Bandung, kami mengajak peserta melepaskan sepatu dan bergerak santai mengikuti ritme musik permainan kelompok. Latihan peregangan ringan dan senam konsentrasi ini melunturkan kekakuan leher dan punggung setelah berjam-jam fokus menyimak materi.',
+    takeaway: 'Istirahatkan tubuhmu setiap 60-90 menit saat belajar. Gerakan tubuh menyuplai kembali oksigen segar ke dalam sel-sel otak.',
+    imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80',
     category: 'bootcamp',
     date: 'Juni 2025',
     location: 'Studio Gerak & Kebugaran, Bandung',
     client: 'Kelas Pengembangan Diri Pemuda',
     participantCount: 22,
     highlights: ['Pencair Suasana Ramah', 'Refleksi Tanpa Tekanan', 'Keakraban Alami Peserta'],
+  },
+  {
+    id: 'gal-18',
+    title: 'Pelatihan Komunikasi Mahasiswa Baru: Bicara Pede di Depan Dosen & Forum',
+    description: 'Workshop interaktif di auditorium kampus mendampingi mahasiswa baru agar percaya diri saat presentasi tugas dan aktif di organisasi.',
+    quote: 'Suaramu di masa muda adalah modal paling berharga untuk menciptakan perubahan di sekitarmu.',
+    shortStory: 'Menghadapi masa transisi dari bangku sekolah ke dunia perkuliahan sering kali membuat mahasiswa baru merasa minder dan takut bertanya. Di workshop ini, 65 mahasiswa baru berlatih cara menyusun argumen 3 poin saat presentasi tugas kuliah dan etika mengemukakan pendapat di forum organisasi mahasiswa tanpa rasa gentar.',
+    takeaway: 'Berani salah di ruang latihan jauh lebih mulia daripada diam membisu selamanya karena takut dihakimi.',
+    imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80',
+    category: 'university',
+    date: 'Mei 2025',
+    location: 'Auditorium Kampus Utama, Bandung',
+    client: 'BEM & Himpunan Mahasiswa',
+    participantCount: 65,
+    highlights: ['Bicara Pede di Depan Kelas', 'Simulasi Presentasi Tugas', 'Antusiasme Mahasiswa Baru'],
+  },
+  {
+    id: 'gal-19',
+    title: 'Simposium Komunikasi Pemimpin Masa Depan: Seni Negosiasi & Public Speaking',
+    description: 'Sesi plenary talk di hadapan para delegasi muda nasional membongkar strategi komunikasi efektif dan cara mengatasi demam panggung.',
+    quote: 'Negosiasi terbaik bukanlah saat satu pihak menang mutlak, melainkan saat kedua pihak merasa dihargai martabatnya.',
+    shortStory: 'Di hadapan 120 delegasi muda nasional di Plenary Hall JCC, sesi ini membongkar seni negosiasi win-win dan teknik panggung untuk menggalang dukungan publik. Melalui simulasi mediasi diplomasi, peserta mempraktikkan cara mencari titik temu di tengah perbedaan pandangan yang tajam.',
+    takeaway: 'Kekuatan persuasi sejati terletak pada kemampuanmu melihat dunia dari kacamata orang yang sedang kamu ajak bicara.',
+    imageUrl: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80',
+    fallbackUrl: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80',
+    category: 'conference',
+    date: 'April 2025',
+    location: 'Plenary Hall JCC, Jakarta',
+    client: 'National Youth Forum',
+    participantCount: 120,
+    highlights: ['Plenary Talk 100+ Delegasi', 'Trik Mengatasi Demam Panggung', 'Tanya Jawab Interaktif'],
   },
 ];
 

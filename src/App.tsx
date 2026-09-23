@@ -86,7 +86,7 @@ export default function App() {
       <GoogleSheetsProvider>
         <ProjectProvider>
           <div
-            className="min-h-screen bg-[#0C0C0C] text-[#D7E2EA] font-sans select-none overflow-x-clip"
+            className="min-h-screen bg-[#F8FAFC] text-[#0F172A] font-sans select-none overflow-x-clip"
             style={{
               fontFamily: "'Kanit', sans-serif",
               overflowX: 'clip',
@@ -162,10 +162,7 @@ export default function App() {
               {/* Contact Button */}
               <button
                 onClick={() => setContactModalOpen(true)}
-                className="px-5 py-3.5 rounded-full text-white font-medium text-xs uppercase tracking-wider shadow-2xl transition-all hover:scale-105 flex items-center gap-2 cursor-pointer"
-                style={{
-                  background: 'linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)',
-                }}
+                className="px-5 py-3.5 rounded-full text-white font-semibold text-xs uppercase tracking-wider shadow-xl shadow-sky-600/20 transition-all hover:scale-105 active:scale-95 flex items-center gap-2 cursor-pointer bg-[#0284C7] hover:bg-[#0369A1]"
                 title="Hubungi Alfi"
               >
                 <MessageSquare className="w-4 h-4" />
@@ -187,12 +184,12 @@ export default function App() {
 
             {/* Drag & Drop Visual Indicator */}
             {isDraggingOver && (
-              <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm border-2 border-dashed border-[#B600A8] flex flex-col items-center justify-center p-6 text-center pointer-events-none">
-                <UploadCloud className="w-16 h-16 text-[#B600A8] animate-bounce mb-4" />
+              <div className="fixed inset-0 z-50 bg-sky-950/70 backdrop-blur-sm border-2 border-dashed border-[#0284C7] flex flex-col items-center justify-center p-6 text-center pointer-events-none">
+                <UploadCloud className="w-16 h-16 text-[#38BDF8] animate-bounce mb-4" />
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
                   Lepaskan Foto di Sini
                 </h3>
-                <p className="text-sm text-[#D7E2EA]/80 max-w-md">
+                <p className="text-sm text-sky-100/90 max-w-md">
                   File foto (IMG_1880 - IMG_1897) akan otomatis tersimpan dan memperbarui seluruh gambar portofolio.
                 </p>
               </div>
@@ -200,9 +197,9 @@ export default function App() {
 
             {/* Sync Success Toast */}
             {syncToast && (
-              <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-[#1A1A1A] border border-[#2E2E2E] text-white shadow-2xl shadow-black/80 animate-fade-in">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
-                <span className="text-sm font-medium">{syncToast}</span>
+              <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white border border-[#BAE6FD] text-[#0F172A] shadow-2xl shadow-sky-500/20 animate-fade-in">
+                <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+                <span className="text-sm font-semibold">{syncToast}</span>
               </div>
             )}
           </div>

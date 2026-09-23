@@ -28,7 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="hero"
-      className="relative w-full h-screen min-h-[600px] flex flex-col justify-between overflow-x-clip bg-[#0C0C0C] select-none"
+      className="relative w-full h-screen min-h-[600px] flex flex-col justify-between overflow-x-clip bg-white select-none border-b border-[#E2E8F0]"
     >
       {/* 1. Navbar in Indonesian */}
       <motion.header
@@ -37,13 +37,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         transition={{ duration: 0.7, delay: 0, ease: [0.25, 0.1, 0.25, 1] }}
         className="w-full px-6 md:px-10 pt-6 md:pt-8 z-30"
       >
-        <nav className="w-full flex items-center justify-between text-[#D7E2EA] font-medium uppercase tracking-wider text-xs sm:text-sm md:text-base lg:text-[1.3rem]">
+        <nav className="w-full flex items-center justify-between text-[#0F172A] font-semibold uppercase tracking-wider text-xs sm:text-sm md:text-base lg:text-[1.3rem]">
           <button
             onClick={() => {
               if (onAboutClick) onAboutClick();
               else scrollTo('about');
             }}
-            className="hover:opacity-70 transition-opacity duration-200 cursor-pointer bg-transparent border-none text-inherit uppercase font-medium tracking-wider"
+            className="hover:text-[#0284C7] transition-colors duration-200 cursor-pointer bg-transparent border-none text-inherit uppercase font-semibold tracking-wider"
           >
             Tentang
           </button>
@@ -53,7 +53,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               else if (onPriceClick) onPriceClick();
               else scrollTo('galeri');
             }}
-            className="hover:opacity-70 transition-opacity duration-200 cursor-pointer bg-transparent border-none text-inherit uppercase font-medium tracking-wider"
+            className="hover:text-[#0284C7] transition-colors duration-200 cursor-pointer bg-transparent border-none text-inherit uppercase font-semibold tracking-wider"
           >
             Galeri
           </button>
@@ -62,16 +62,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               if (onProjectsClick) onProjectsClick();
               else scrollTo('projects');
             }}
-            className="hover:opacity-70 transition-opacity duration-200 cursor-pointer bg-transparent border-none text-inherit uppercase font-medium tracking-wider"
+            className="hover:text-[#0284C7] transition-colors duration-200 cursor-pointer bg-transparent border-none text-inherit uppercase font-semibold tracking-wider"
           >
-            Proyek
+            Materi
           </button>
           <button
             onClick={() => {
               if (onContactClick) onContactClick();
               else scrollTo('contact');
             }}
-            className="hover:opacity-70 transition-opacity duration-200 cursor-pointer bg-transparent border-none text-inherit uppercase font-medium tracking-wider"
+            className="hover:text-[#0284C7] transition-colors duration-200 cursor-pointer bg-transparent border-none text-inherit uppercase font-semibold tracking-wider"
           >
             Kontak
           </button>
@@ -93,7 +93,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-xs sm:text-sm text-[#A0B0BC] uppercase tracking-widest mt-1.5 text-center font-normal"
+          className="text-xs sm:text-sm text-[#0284C7] uppercase tracking-widest mt-1.5 text-center font-semibold"
         >
           Trainer &amp; Fasilitator Pelatihan
         </motion.p>
@@ -116,7 +116,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <img
               src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
               alt="Potret Alfi"
-              className="w-full h-auto object-contain max-h-[75vh] drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] pointer-events-none select-none"
+              className="w-full h-auto object-contain max-h-[75vh] pointer-events-none select-none"
               draggable={false}
             />
           </Magnet>
@@ -129,10 +129,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[200px] sm:max-w-[280px] md:max-w-[340px]"
+          className="text-[#334155] font-normal uppercase tracking-wide leading-snug max-w-[200px] sm:max-w-[280px] md:max-w-[340px]"
           style={{ fontSize: 'clamp(0.8125rem, 1.1vw, 1.1rem)' }}
         >
-          Trainer berdedikasi dengan fokus membimbing komunikasi, kepercayaan diri, dan pengembangan potensi diri peserta secara interaktif
+          Bantu kamu dan tim lebih berani ngomong di depan umum, percaya diri, dan bikin presentasi jadi seru tanpa rasa canggung
         </motion.p>
 
         <motion.div

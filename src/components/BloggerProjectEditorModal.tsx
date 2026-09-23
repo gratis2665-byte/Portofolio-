@@ -268,7 +268,7 @@ export const BloggerProjectEditorModal: React.FC<BloggerProjectEditorModalProps>
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-2.5 text-xs sm:text-sm font-medium border border-white/20"
+                className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-[#0284C7] text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-2.5 text-xs sm:text-sm font-medium border border-white/20"
               >
                 <CheckCircle2 className="w-4 h-4 text-emerald-300" />
                 <span>{toastMessage}</span>
@@ -390,7 +390,7 @@ export const BloggerProjectEditorModal: React.FC<BloggerProjectEditorModalProps>
                   onClick={() => setSelectedProjectId(proj.id)}
                   className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 shrink-0 ${
                     selectedProjectId === proj.id
-                      ? 'bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-white font-bold shadow-md'
+                      ? 'bg-[#0284C7] text-white font-bold shadow-md'
                       : 'bg-[#222222] text-[#D7E2EA]/70 hover:text-white hover:bg-[#2C2C2C]'
                   }`}
                 >
@@ -886,11 +886,7 @@ export const BloggerProjectEditorModal: React.FC<BloggerProjectEditorModalProps>
               <div className="p-5 rounded-[28px] bg-[#161616] border border-[#262626] space-y-3">
                 <button
                   onClick={handleSave}
-                  className="w-full py-3.5 rounded-full text-white font-semibold text-xs uppercase tracking-wider transition-all hover:scale-102 flex items-center justify-center gap-2 cursor-pointer shadow-lg"
-                  style={{
-                    background:
-                      'linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)',
-                  }}
+                  className="w-full py-3.5 rounded-full bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-xs uppercase tracking-wider transition-all hover:scale-102 flex items-center justify-center gap-2 cursor-pointer shadow-lg"
                 >
                   <Save className="w-4 h-4" />
                   <span>Simpan Perubahan Proyek</span>
@@ -981,7 +977,7 @@ export const BloggerProjectEditorModal: React.FC<BloggerProjectEditorModalProps>
                       alert('JSON tidak valid. Periksa kembali formatnya.');
                     }
                   }}
-                  className="px-5 py-2 rounded-xl bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-xs font-bold uppercase"
+                  className="px-5 py-2 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-xs font-bold uppercase cursor-pointer"
                 >
                   Terapkan &amp; Muat Ulang
                 </button>

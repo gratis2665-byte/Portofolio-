@@ -1,17 +1,6 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Briefcase,
-  GraduationCap,
-  Award,
-  ShieldCheck,
-  CheckCircle2,
-  Calendar,
-  Building2,
-  MapPin,
-  ChevronDown,
-  Sparkles,
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ChevronDown, Sparkles, HeartHandshake, Mic2, Compass } from 'lucide-react';
 import { FadeIn } from './FadeIn';
 import { AnimatedText } from './AnimatedText';
 import { ContactButton } from './ContactButton';
@@ -22,7 +11,7 @@ interface AboutSectionProps {
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) => {
-  const [activeTab, setActiveTab] = useState<'bio' | 'experience' | 'education'>('bio');
+  const [activeTab, setActiveTab] = useState<'bio' | 'story' | 'experience' | 'education'>('bio');
   const [expandedExpId, setExpandedExpId] = useState<string | null>('exp-1');
 
   const scrollToContact = () => {
@@ -37,65 +26,95 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
   return (
     <section
       id="about"
-      className="relative min-h-screen w-full bg-[#0C0C0C] px-5 sm:px-8 md:px-10 py-24 overflow-hidden flex flex-col items-center justify-center select-none"
+      className="relative min-h-screen w-full bg-white px-5 sm:px-8 md:px-10 py-24 overflow-hidden flex flex-col items-center justify-center select-none border-t border-[#E2E8F0]"
     >
       {/* Center Content Container */}
       <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center">
-        {/* Main Heading in Indonesian */}
+        {/* Main Heading */}
         <FadeIn delay={0} y={30}>
           <h2
-            className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-4 select-none"
+            className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-4 select-none text-[#0F172A]"
             style={{ fontSize: 'clamp(2rem, 6.5vw, 4.5rem)' }}
           >
             Tentang Saya
           </h2>
-          <p className="text-center font-mono uppercase text-xs sm:text-sm tracking-widest text-[#D7E2EA]/60 mb-10">
+          <p className="text-center font-mono uppercase text-xs sm:text-sm tracking-widest text-[#0284C7] font-semibold mb-8">
             {PERSONAL_INFO.fullName} &bull; {PERSONAL_INFO.title}
           </p>
         </FadeIn>
 
-        {/* Scroll-driven character reveal text in Indonesian */}
-        <div className="w-full max-w-4xl px-4 mb-12 text-center">
-          <AnimatedText text="Sebagai seorang trainer dan fasilitator pelatihan, saya berfokus mendampingi peserta membangun keterampilan komunikasi efektif, teknik presentasi memikat, dan rasa percaya diri berbicara di depan umum secara ramah dan aplikatif. Telah mendampingi 280+ peserta, saya memadukan simulasi interaktif dengan 100% latihan langsung agar setiap sesi pelatihan terasa dinamis, bermakna, dan menyenangkan." />
+        {/* Character reveal text in warm, friendly Indonesian */}
+        <div className="w-full max-w-4xl px-4 mb-10 text-center">
+          <AnimatedText text="Halo! Saya Alfi, teman ngobrol dan fasilitator belajar kamu buat urusan bicara di depan umum, bangun rasa percaya diri, dan mencairkan suasana kaku. Saya percaya semua orang punya suara berharga yang layak didengar. Di kelas saya, suasananya dibuat seru dan santai tanpa rasa takut dihakimi." />
+        </div>
+
+        {/* Story Intro Banner: Dari Pemalu Jadi Pembicara */}
+        <div className="w-full max-w-4xl p-6 sm:p-8 rounded-[28px] bg-[#F8FAFC] border border-[#BAE6FD] mb-10 text-left">
+          <div className="flex items-start gap-4">
+            <div className="p-3 rounded-2xl bg-white border border-[#BAE6FD] text-[#0284C7] shrink-0 hidden sm:block">
+              <Compass className="w-6 h-6" />
+            </div>
+            <div className="space-y-2">
+              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#0284C7] block">
+                Catatan Dari Alfi
+              </span>
+              <h3 className="text-lg sm:text-xl font-bold text-[#0F172A]">
+                &quot;Dulu, megang mic aja tangan saya gemetar hebat dan dingin kayak es.&quot;
+              </h3>
+              <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-sans">
+                Saya tahu banget gimana rasanya punya ide bagus di kepala tapi terkunci di tenggorokan karena takut salah atau takut ditertawakan orang. Karena pernah ada di posisi itu, saya mendedikasikan waktu buat nemenin kamu lewat metode yang seru, manusiawi, dan tanpa tekanan. Public speaking bukan bakat turunan dari lahir—ini cuma soal kebiasaan dan latihan yang nyaman.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Interactive Detail Switcher */}
-        <div className="w-full max-w-4xl bg-[#141414] border border-[#242424] rounded-[28px] p-6 sm:p-8 backdrop-blur-md mb-12">
+        <div className="w-full max-w-4xl bg-white border border-[#BAE6FD] rounded-[28px] p-6 sm:p-8 shadow-sm mb-12">
           {/* Tab Navigation */}
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 border-b border-[#242424] pb-5">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 border-b border-[#E2E8F0] pb-5">
             <button
               onClick={() => setActiveTab('bio')}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'bio'
-                  ? 'bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-white shadow-lg shadow-[#B600A8]/20'
-                  : 'bg-[#1C1C1C] text-[#D7E2EA]/70 hover:text-white hover:bg-[#262626]'
+                  ? 'bg-[#0284C7] text-white shadow-xs'
+                  : 'bg-[#F0F9FF] text-[#0369A1] hover:bg-[#E0F2FE]'
               }`}
             >
-              Pedagogi &amp; Keahlian
+              Gaya Belajar &amp; Materi
+            </button>
+            <button
+              onClick={() => setActiveTab('story')}
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+                activeTab === 'story'
+                  ? 'bg-[#0284C7] text-white shadow-xs'
+                  : 'bg-[#F0F9FF] text-[#0369A1] hover:bg-[#E0F2FE]'
+              }`}
+            >
+              3 Janji di Kelas Alfi
             </button>
             <button
               onClick={() => setActiveTab('experience')}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'experience'
-                  ? 'bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-white shadow-lg shadow-[#B600A8]/20'
-                  : 'bg-[#1C1C1C] text-[#D7E2EA]/70 hover:text-white hover:bg-[#262626]'
+                  ? 'bg-[#0284C7] text-white shadow-xs'
+                  : 'bg-[#F0F9FF] text-[#0369A1] hover:bg-[#E0F2FE]'
               }`}
             >
-              Pengalaman Kerja ({WORK_EXPERIENCES.length})
+              Pengalaman Kelas ({WORK_EXPERIENCES.length})
             </button>
             <button
               onClick={() => setActiveTab('education')}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'education'
-                  ? 'bg-gradient-to-r from-[#B600A8] to-[#7621B0] text-white shadow-lg shadow-[#B600A8]/20'
-                  : 'bg-[#1C1C1C] text-[#D7E2EA]/70 hover:text-white hover:bg-[#262626]'
+                  ? 'bg-[#0284C7] text-white shadow-xs'
+                  : 'bg-[#F0F9FF] text-[#0369A1] hover:bg-[#E0F2FE]'
               }`}
             >
-              Pendidikan &amp; Lisensi
+              Pendidikan &amp; Sertifikasi
             </button>
           </div>
 
-          {/* Tab 1: Pedagogi & Keahlian */}
+          {/* Tab 1: Cara Belajar & Keahlian */}
           {activeTab === 'bio' && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -105,30 +124,28 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
-                  <h3 className="text-lg font-bold text-white uppercase tracking-wide flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-[#B600A8]" />
-                    <span>Metode Pelatihan Praktis &amp; Partisipatif</span>
+                  <h3 className="text-base font-bold text-[#0F172A] uppercase tracking-wide">
+                    Belajar Santai, Langsung Terasa Hasilnya
                   </h3>
-                  <p className="text-sm text-[#D7E2EA]/80 leading-relaxed">
-                    Saya meyakini bahwa keterampilan komunikasi dan berbicara di depan umum dapat dilatih oleh siapa saja melalui lingkungan belajar yang aman secara psikologis, ramah, dan bebas canggung. Sesi pelatihan mengadopsi rasio <strong>80% Praktik &amp; Simulasi Nyata, 20% Pemahaman Konsep</strong>.
+                  <p className="text-sm text-[#334155] leading-relaxed">
+                    Belajar bicara di depan orang banyak itu mirip banget sama belajar naik sepeda: gak bakal bisa kalau cuma baca teori di buku tebal. Kamu harus langsung coba pegang setang dan gowes perlahan.
                   </p>
-                  <p className="text-sm text-[#D7E2EA]/80 leading-relaxed">
-                    Setiap modul dirancang aplikatif—mulai dari latihan pernapasan diafragma, teknik menyusun poin presentasi lugas, hingga roleplay skenario kerja tim sehari-hari dengan umpan balik apresiatif langsung.
+                  <p className="text-sm text-[#334155] leading-relaxed">
+                    Di sesi bareng saya, rasio belajarnya <strong>80% Praktik Langsung &amp; 20% Obrolan Konsep</strong>. Mulai dari trik atur napas saat deg-degan, cara buka obrolan di 30 detik pertama, sampai latihan presentasi santai bareng teman sekelas dengan masukan yang ramah dan saling dukung.
                   </p>
                 </div>
 
                 <div className="space-y-3">
-                  <h3 className="text-lg font-bold text-white uppercase tracking-wide flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-[#7621B0]" />
-                    <span>Area Spesialisasi Utama</span>
+                  <h3 className="text-base font-bold text-[#0F172A] uppercase tracking-wide">
+                    Topik yang Paling Sering Dilatih
                   </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <div className="space-y-2">
                     {PERSONAL_INFO.specializations.map((spec: string, i: number) => (
                       <div
                         key={i}
-                        className="flex items-center gap-2 p-2.5 rounded-xl bg-[#1A1A1A] border border-[#282828] text-xs text-[#D7E2EA]"
+                        className="flex items-center gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#1E293B]"
                       >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                        <span className="w-2 h-2 rounded-full bg-[#0284C7] shrink-0" />
                         <span>{spec}</span>
                       </div>
                     ))}
@@ -138,7 +155,49 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
             </motion.div>
           )}
 
-          {/* Tab 2: Pengalaman Kerja */}
+          {/* Tab 2: 3 Janji di Kelas Alfi */}
+          {activeTab === 'story' && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="space-y-6 text-left"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-3">
+                  <div className="w-9 h-9 rounded-xl bg-white border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+                    <HeartHandshake className="w-5 h-5" />
+                  </div>
+                  <h4 className="font-bold text-sm text-[#0F172A]">1. Bebas Rasa Malu &amp; Takut</h4>
+                  <p className="text-xs text-[#475569] leading-relaxed">
+                    Gak ada istilah &apos;salah ngomong&apos; di kelas. Semua peserta ada di level belajar yang sama, saling semangati, dan gak ada yang bakal menertawakan.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-3">
+                  <div className="w-9 h-9 rounded-xl bg-white border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+                    <Mic2 className="w-5 h-5" />
+                  </div>
+                  <h4 className="font-bold text-sm text-[#0F172A]">2. Jadi Diri Sendiri</h4>
+                  <p className="text-xs text-[#475569] leading-relaxed">
+                    Kamu gak perlu niru gaya motivator yang teriak-teriak kalau memang bukan gayamu. Kita cari gaya bicaramu yang paling natural dan nyaman.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-3">
+                  <div className="w-9 h-9 rounded-xl bg-white border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+                    <Sparkles className="w-5 h-5" />
+                  </div>
+                  <h4 className="font-bold text-sm text-[#0F172A]">3. Pulang Bawa Percaya Diri</h4>
+                  <p className="text-xs text-[#475569] leading-relaxed">
+                    Selesai sesi, kamu bakal punya langkah jelas buat dipraktikkan langsung pas meeting kantor, presentasi kampus, atau pimpin obrolan tim.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Tab 3: Pengalaman Kerja */}
           {activeTab === 'experience' && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -151,28 +210,26 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
                 return (
                   <div
                     key={exp.id}
-                    className="p-5 rounded-2xl bg-[#191919] border border-[#282828] hover:border-[#3A3A3A] transition-colors"
+                    className="p-5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-sky-300 transition-colors"
                   >
                     <div
                       onClick={() => setExpandedExpId(isExpanded ? null : exp.id)}
                       className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 cursor-pointer"
                     >
                       <div>
-                        <span className="text-xs font-mono uppercase text-[#B600A8] tracking-wider block">
+                        <span className="text-xs font-mono uppercase text-[#0284C7] font-semibold tracking-wider block">
                           {exp.period} &bull; {exp.type}
                         </span>
-                        <h4 className="text-base sm:text-lg font-bold text-white tracking-wide">
+                        <h4 className="text-base sm:text-lg font-bold text-[#0F172A] tracking-wide">
                           {exp.role}
                         </h4>
-                        <div className="flex items-center gap-2 text-xs text-[#D7E2EA]/60 font-mono mt-0.5">
-                          <Building2 className="w-3.5 h-3.5" />
+                        <div className="text-xs text-[#64748B] font-mono mt-0.5">
                           <span>{exp.company}</span>
-                          <span>&bull;</span>
-                          <MapPin className="w-3.5 h-3.5" />
+                          <span className="mx-1.5">&bull;</span>
                           <span>{exp.location}</span>
                         </div>
                       </div>
-                      <button className="self-end sm:self-center p-1.5 rounded-full bg-[#242424] text-[#D7E2EA] hover:bg-[#303030]">
+                      <button className="self-end sm:self-center p-1.5 rounded-full bg-[#E2E8F0] text-[#334155] hover:bg-[#CBD5E1] cursor-pointer">
                         <ChevronDown
                           className={`w-4 h-4 transition-transform duration-200 ${
                             isExpanded ? 'rotate-180' : ''
@@ -185,18 +242,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
-                        className="mt-4 pt-4 border-t border-[#262626] space-y-3"
+                        className="mt-4 pt-4 border-t border-[#E2E8F0] space-y-3"
                       >
-                        <p className="text-xs sm:text-sm text-[#D7E2EA]/80 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-[#334155] leading-relaxed">
                           {exp.description}
                         </p>
                         <div className="space-y-1.5">
-                          <span className="text-[11px] font-mono uppercase text-[#D7E2EA]/50 block">
-                            Pencapaian Kunci:
+                          <span className="text-[11px] font-mono uppercase text-[#64748B] block font-semibold">
+                            Hal yang sudah dicapai:
                           </span>
                           {exp.achievements.map((ach, idx) => (
-                            <div key={idx} className="flex items-start gap-2 text-xs text-[#D7E2EA]/90">
-                              <span className="text-emerald-400 font-bold">&bull;</span>
+                            <div key={idx} className="flex items-start gap-2 text-xs text-[#1E293B]">
+                              <span className="text-[#0284C7] font-bold">&bull;</span>
                               <span>{ach}</span>
                             </div>
                           ))}
@@ -205,7 +262,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
                           {exp.skills.map((skill, sIdx) => (
                             <span
                               key={sIdx}
-                              className="px-2.5 py-1 rounded-md bg-[#222222] text-[10px] font-mono text-[#D7E2EA]/70"
+                              className="px-2.5 py-0.5 rounded-md bg-white border border-[#E2E8F0] text-xs font-mono text-[#0369A1]"
                             >
                               {skill}
                             </span>
@@ -219,7 +276,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
             </motion.div>
           )}
 
-          {/* Tab 3: Pendidikan & Lisensi */}
+          {/* Tab 4: Pendidikan & Sertifikasi */}
           {activeTab === 'education' && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -231,30 +288,29 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
                 {EDUCATION_DATA.map((edu) => (
                   <div
                     key={edu.id}
-                    className="p-5 rounded-2xl bg-[#191919] border border-[#282828] space-y-3"
+                    className="p-5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-3"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                      <h4 className="text-base font-bold text-white">{edu.degree}</h4>
-                      <span className="text-xs font-mono text-[#B600A8]">{edu.year}</span>
+                      <h4 className="text-base font-bold text-[#0F172A]">{edu.degree}</h4>
+                      <span className="text-xs font-mono font-semibold text-[#0284C7]">{edu.year}</span>
                     </div>
-                    <p className="text-xs text-[#D7E2EA]/70 font-mono">
-                      {edu.institution} {edu.honors && <span>&bull; <strong className="text-emerald-400">{edu.honors}</strong></span>}
+                    <p className="text-xs text-[#64748B] font-mono">
+                      {edu.institution} {edu.honors && <span>&bull; <strong className="text-emerald-600">{edu.honors}</strong></span>}
                     </p>
-                    <p className="text-xs text-[#D7E2EA]/80 leading-relaxed">{edu.description}</p>
+                    <p className="text-xs text-[#334155] leading-relaxed">{edu.description}</p>
 
                     {edu.certifications && edu.certifications.length > 0 && (
-                      <div className="pt-3 border-t border-[#262626]">
-                        <span className="text-[11px] font-mono uppercase tracking-wider text-[#D7E2EA]/60 block mb-2">
-                          Sertifikasi &amp; Lisensi Resmi:
+                      <div className="pt-3 border-t border-[#E2E8F0]">
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-[#64748B] block mb-2 font-semibold">
+                          Sertifikasi &amp; Pelatihan Pendukung:
                         </span>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {edu.certifications.map((cert: any, cIdx: number) => (
                             <div
                               key={cIdx}
-                              className="flex items-center gap-2 p-2 rounded-xl bg-[#202020] border border-[#2B2B2B] text-xs text-[#D7E2EA]"
+                              className="p-2.5 rounded-xl bg-white border border-[#E2E8F0] text-xs text-[#0F172A]"
                             >
-                              <Award className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                              <span className="truncate">{cert.name}</span>
+                              <span className="truncate block font-medium">{cert.name}</span>
                             </div>
                           ))}
                         </div>
@@ -270,7 +326,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
         {/* Contact CTA Button */}
         <div className="mt-4">
           <FadeIn delay={0.2} y={20}>
-            <ContactButton label="Hubungi Alfi" onClick={scrollToContact} />
+            <ContactButton label="Ngobrol Bareng Alfi" onClick={scrollToContact} />
           </FadeIn>
         </div>
       </div>

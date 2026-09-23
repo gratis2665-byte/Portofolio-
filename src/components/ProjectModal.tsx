@@ -58,7 +58,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               alt={project.title}
               className="w-full h-full object-cover opacity-85"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+            <div className="absolute inset-0 bg-black/60" />
             <div className="absolute bottom-6 left-6 right-6 text-white">
               <span className="px-2.5 py-1 text-xs font-mono uppercase tracking-wider rounded-md bg-emerald-600/90 text-white mb-2 inline-block">
                 {project.category.toUpperCase()}

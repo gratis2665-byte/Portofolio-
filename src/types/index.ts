@@ -102,6 +102,9 @@ export interface GalleryPhoto {
   client: string;
   participantCount: number;
   description: string;
+  shortStory?: string;
+  quote?: string;
+  takeaway?: string;
   imageUrl: string;
   fallbackUrl?: string;
   highlights: string[];
