@@ -48,14 +48,8 @@ export const StatsSection: React.FC = () => {
       className="w-full bg-[#F0F7FF]/50 py-24 px-5 sm:px-8 md:px-10 border-t border-[#E2E8F0] select-none relative z-10"
     >
       <div className="max-w-5xl mx-auto">
-        {/* Section Header with subtle scroll reveal */}
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px', amount: 0.2 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
-        >
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#0284C7] font-semibold block mb-2">
               Cerita &bull; Jejak Perjalanan
@@ -104,21 +98,14 @@ export const StatsSection: React.FC = () => {
               Ulasan Peserta
             </button>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Content Tabs with Scroll Stagger */}
+        {/* Content Tabs */}
         {activeTab === 'overview' && (
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-40px', amount: 0.15 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {TRAINING_STATS.map((stat) => (
-              <motion.div
+              <div
                 key={stat.id}
-                variants={cardVariants}
                 className="p-6 rounded-[28px] bg-white border border-[#E2E8F0] hover:border-sky-300 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full"
               >
                 <div>
@@ -135,19 +122,13 @@ export const StatsSection: React.FC = () => {
                     {stat.subtext}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'breakdown' && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px', amount: 0.15 }}
-            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            className="p-6 sm:p-8 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm"
-          >
+          <div className="p-6 sm:p-8 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm">
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#E2E8F0]">
               <h3 className="text-sm sm:text-base font-bold text-[#0F172A] uppercase tracking-wide">
                 Porsi Materi yang Sering Dibawakan (Total 18+ Batch)
@@ -158,15 +139,8 @@ export const StatsSection: React.FC = () => {
             </div>
 
             <div className="space-y-6">
-              {topicDistribution.map((topic, idx) => (
-                <motion.div
-                  key={topic.name}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                  className="space-y-2"
-                >
+              {topicDistribution.map((topic) => (
+                <div key={topic.name} className="space-y-2">
                   <div className="flex items-center justify-between text-xs sm:text-sm">
                     <span className="font-semibold text-[#1E293B]">
                       {topic.name}
@@ -179,15 +153,12 @@ export const StatsSection: React.FC = () => {
                     </div>
                   </div>
                   <div className="h-2.5 w-full bg-[#F1F5F9] rounded-full overflow-hidden p-0.5 border border-[#E2E8F0]">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${topic.percentage}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.9, delay: 0.15 + idx * 0.08, ease: 'easeOut' }}
-                      className="h-full bg-[#0284C7] rounded-full"
+                    <div
+                      style={{ width: `${topic.percentage}%` }}
+                      className="h-full bg-[#0284C7] rounded-full transition-all duration-500"
                     />
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -205,17 +176,11 @@ export const StatsSection: React.FC = () => {
                 <span>Feedback personal tanpa bikin peserta merasa dihakimi.</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'evaluations' && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px', amount: 0.15 }}
-            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            className="p-6 sm:p-8 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm"
-          >
+          <div className="p-6 sm:p-8 rounded-[32px] bg-white border border-[#E2E8F0] shadow-sm">
             <div className="mb-6 pb-4 border-b border-[#E2E8F0]">
               <h3 className="text-base sm:text-lg font-bold text-[#0F172A]">
                 Rating Kepuasan Rata-rata: <span className="text-[#0284C7]">4.91 / 5.0</span>
@@ -226,15 +191,8 @@ export const StatsSection: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {evaluationBreakdown.map((item, idx) => (
-                <motion.div
-                  key={item.metric}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                  className="p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]"
-                >
+              {evaluationBreakdown.map((item) => (
+                <div key={item.metric} className="p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs font-semibold text-[#1E293B]">
                       {item.metric}
@@ -244,18 +202,15 @@ export const StatsSection: React.FC = () => {
                     </span>
                   </div>
                   <div className="h-2 w-full bg-[#E2E8F0] rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${item.percentage}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.1 + idx * 0.08, ease: 'easeOut' }}
-                      className="h-full bg-[#0284C7] rounded-full"
+                    <div
+                      style={{ width: `${item.percentage}%` }}
+                      className="h-full bg-[#0284C7] rounded-full transition-all duration-500"
                     />
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
     </section>

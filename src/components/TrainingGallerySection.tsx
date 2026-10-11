@@ -101,35 +101,35 @@ export const TrainingGallerySection: React.FC = () => {
     : GALLERY_PHOTOS.filter((p) => p.category === selectedGalleryCategory);
 
   return (
-    <section id="galeri" className="w-full bg-white py-24 px-5 sm:px-8 md:px-10 border-t border-[#E2E8F0] select-none relative z-10">
+    <section id="galeri" className="w-full bg-white dark:bg-[#0B1120] py-24 px-5 sm:px-8 md:px-10 border-t border-[#E2E8F0] dark:border-[#1E293B] select-none relative z-10">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
           <div>
-            <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#0284C7] font-semibold block mb-2">
+            <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#0284C7] dark:text-[#38BDF8] font-semibold block mb-2">
               Momen &bull; Suasana Kelas
             </span>
             <h2
-              className="hero-heading font-black uppercase tracking-tight leading-none text-[#0F172A]"
+              className="hero-heading font-black uppercase tracking-tight leading-none text-[#0F172A] dark:text-[#F8FAFC]"
               style={{ fontSize: 'clamp(2rem, 6.5vw, 4.5rem)' }}
             >
               Galeri Foto
             </h2>
-            <p className="text-[#475569] text-xs sm:text-sm max-w-xl mt-3 leading-relaxed">
+            <p className="text-[#475569] dark:text-[#CBD5E1] text-xs sm:text-sm max-w-xl mt-3 leading-relaxed">
               Kumpulan dokumentasi kegiatan pelatihan, cerita refleksi di balik momen, dan potret kehangatan bersama para peserta.
             </p>
           </div>
 
           {/* View Mode Switcher: Geser Santai vs Lihat Semua (Seperti Modul Pelatihan) */}
           <div className="flex flex-wrap items-center gap-3 self-start md:self-auto">
-            <div className="flex items-center p-1 rounded-full bg-white border border-[#BAE6FD] shadow-xs">
+            <div className="flex items-center p-1 rounded-full bg-white dark:bg-[#1E293B] border border-[#BAE6FD] dark:border-[#334155] shadow-xs">
               <button
                 type="button"
                 onClick={() => setViewMode('slider')}
                 className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full transition-all cursor-pointer ${
                   viewMode === 'slider'
                     ? 'bg-[#0284C7] text-white shadow-xs'
-                    : 'text-[#64748B] hover:text-[#0F172A]'
+                    : 'text-[#64748B] dark:text-[#94A3B8] hover:text-[#0F172A] dark:hover:text-white'
                 }`}
               >
                 Geser Santai
@@ -140,7 +140,7 @@ export const TrainingGallerySection: React.FC = () => {
                 className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full transition-all cursor-pointer ${
                   viewMode === 'grid'
                     ? 'bg-[#0284C7] text-white shadow-xs'
-                    : 'text-[#64748B] hover:text-[#0F172A]'
+                    : 'text-[#64748B] dark:text-[#94A3B8] hover:text-[#0F172A] dark:hover:text-white'
                 }`}
               >
                 Lihat Semua ({totalPhotos})
@@ -153,7 +153,7 @@ export const TrainingGallerySection: React.FC = () => {
                 <button
                   type="button"
                   onClick={handlePrev}
-                  className="p-2.5 rounded-full bg-white border border-[#BAE6FD] text-[#0284C7] hover:bg-[#E0F2FE] shadow-xs cursor-pointer transition-colors active:scale-95"
+                  className="p-2.5 rounded-full bg-white dark:bg-[#1E293B] border border-[#BAE6FD] dark:border-[#334155] text-[#0284C7] dark:text-[#38BDF8] hover:bg-[#E0F2FE] dark:hover:bg-[#334155] shadow-xs cursor-pointer transition-colors active:scale-95"
                   aria-label="Foto sebelumnya"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -161,7 +161,7 @@ export const TrainingGallerySection: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="p-2.5 rounded-full bg-white border border-[#BAE6FD] text-[#0284C7] hover:bg-[#E0F2FE] shadow-xs cursor-pointer transition-colors active:scale-95"
+                  className="p-2.5 rounded-full bg-white dark:bg-[#1E293B] border border-[#BAE6FD] dark:border-[#334155] text-[#0284C7] dark:text-[#38BDF8] hover:bg-[#E0F2FE] dark:hover:bg-[#334155] shadow-xs cursor-pointer transition-colors active:scale-95"
                   aria-label="Foto berikutnya"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -183,7 +183,7 @@ export const TrainingGallerySection: React.FC = () => {
                   className={`px-3 py-1.5 rounded-full text-xs font-mono whitespace-nowrap transition-all cursor-pointer shrink-0 flex items-center gap-1.5 ${
                     safeIndex === idx
                       ? 'bg-[#0284C7] text-white font-bold shadow-xs'
-                      : 'bg-white text-[#64748B] hover:text-[#0284C7] border border-[#E2E8F0]'
+                      : 'bg-white dark:bg-[#1E293B] text-[#64748B] dark:text-[#94A3B8] hover:text-[#0284C7] dark:hover:text-[#38BDF8] border border-[#E2E8F0] dark:border-[#334155]'
                   }`}
                 >
                   <span>#{idx + 1}</span>
@@ -200,7 +200,7 @@ export const TrainingGallerySection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.35, ease: 'easeOut' }}
-                className="rounded-[32px] sm:rounded-[40px] border border-[#BAE6FD] bg-white p-5 sm:p-8 md:p-10 shadow-lg shadow-sky-100/40 overflow-hidden"
+                className="rounded-[32px] sm:rounded-[40px] border border-[#BAE6FD] dark:border-[#1E293B] bg-white dark:bg-[#0F172A] p-5 sm:p-8 md:p-10 shadow-lg shadow-sky-100/40 dark:shadow-black/50 overflow-hidden"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                   {/* Left Column: Stacked Photos Effect ("Poto Ditumpuk") */}
@@ -209,7 +209,7 @@ export const TrainingGallerySection: React.FC = () => {
                       {/* Third Card in Stack (Lowest Layer) */}
                       {nextPhoto2 && (
                         <div
-                          className="absolute inset-0 rounded-[28px] overflow-hidden border border-[#CBD5E1] bg-slate-200 shadow-xs pointer-events-none transition-transform"
+                          className="absolute inset-0 rounded-[28px] overflow-hidden border border-[#CBD5E1] dark:border-[#334155] bg-slate-200 dark:bg-slate-800 shadow-xs pointer-events-none transition-transform"
                           style={{
                             transform: 'translateY(16px) scale(0.92)',
                             zIndex: 1,
@@ -228,7 +228,7 @@ export const TrainingGallerySection: React.FC = () => {
                       {nextPhoto1 && (
                         <div
                           onClick={handleNext}
-                          className="absolute inset-0 rounded-[28px] overflow-hidden border border-[#CBD5E1] bg-slate-100 shadow-sm cursor-pointer transition-transform hover:translate-y-2"
+                          className="absolute inset-0 rounded-[28px] overflow-hidden border border-[#CBD5E1] dark:border-[#334155] bg-slate-100 dark:bg-slate-700 shadow-sm cursor-pointer transition-transform hover:translate-y-2"
                           style={{
                             transform: 'translateY(8px) scale(0.96)',
                             zIndex: 2,
@@ -241,7 +241,7 @@ export const TrainingGallerySection: React.FC = () => {
                             alt=""
                             className="w-full h-full object-cover"
                           />
-                          <div className="absolute inset-0 bg-[#0F172A]/20" />
+                          <div className="absolute inset-0 bg-[#0F172A]/20 dark:bg-black/40" />
                         </div>
                       )}
 
@@ -284,15 +284,15 @@ export const TrainingGallerySection: React.FC = () => {
                         </div>
 
                         {/* Drag Hint on Bottom */}
-                        <div className="absolute inset-x-0 bottom-0 p-3 bg-[#0F172A]/85 text-center text-[11px] font-mono text-white/90 z-20 flex items-center justify-between px-4">
-                          <span>Geser atau klik foto untuk melihat penuh</span>
+                        <div className="absolute inset-x-0 bottom-0 p-3 bg-[#0F172A]/80 text-center text-xs font-mono text-white/90 z-20 flex items-center justify-between px-4">
+                          <span>Geser foto untuk melihat dokumentasi lainnya</span>
                           <span className="text-sky-300 font-bold">{activePhoto.date}</span>
                         </div>
                       </motion.div>
                     </div>
 
                     {/* Pagination Indicators & Next/Prev Controls */}
-                    <div className="flex items-center justify-between w-full max-w-[500px] mt-8 pt-4 border-t border-[#E2E8F0]">
+                    <div className="flex items-center justify-between w-full max-w-[500px] mt-8 pt-4 border-t border-[#E2E8F0] dark:border-[#1E293B]">
                       <div className="flex items-center gap-1.5">
                         {GALLERY_PHOTOS.slice(0, Math.min(12, totalPhotos)).map((_, dotIdx) => (
                           <button
@@ -300,16 +300,16 @@ export const TrainingGallerySection: React.FC = () => {
                             onClick={() => setCurrentIndex(dotIdx)}
                             className={`h-2 rounded-full transition-all cursor-pointer ${
                               safeIndex === dotIdx
-                                ? 'w-6 bg-[#0284C7]'
-                                : 'w-2 bg-[#CBD5E1] hover:bg-[#94A3B8]'
+                                ? 'w-6 bg-[#0284C7] dark:bg-[#38BDF8]'
+                                : 'w-2 bg-[#CBD5E1] dark:bg-[#334155] hover:bg-[#94A3B8]'
                             }`}
                             aria-label={`Ke foto ${dotIdx + 1}`}
                           />
                         ))}
                       </div>
 
-                      <div className="text-xs font-mono text-[#64748B]">
-                        Foto <strong className="text-[#0284C7]">{safeIndex + 1}</strong> dari {totalPhotos}
+                      <div className="text-xs font-mono text-[#64748B] dark:text-[#94A3B8]">
+                        Foto <strong className="text-[#0284C7] dark:text-[#38BDF8]">{safeIndex + 1}</strong> dari {totalPhotos}
                       </div>
                     </div>
                   </div>
@@ -319,34 +319,34 @@ export const TrainingGallerySection: React.FC = () => {
                     {/* Meta info header */}
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-2">
-                        <span className="text-xs font-mono uppercase tracking-widest text-[#0284C7] font-semibold">
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#0284C7] dark:text-[#38BDF8] font-semibold">
                           {activePhoto.client}
                         </span>
                         <span className="text-[#94A3B8]">&bull;</span>
-                        <span className="text-xs font-mono text-[#64748B] flex items-center gap-1">
-                          <MapPin className="w-3.5 h-3.5 text-[#0284C7]" />
+                        <span className="text-xs font-mono text-[#64748B] dark:text-[#94A3B8] flex items-center gap-1">
+                          <MapPin className="w-3.5 h-3.5 text-[#0284C7] dark:text-[#38BDF8]" />
                           <span>{activePhoto.location}</span>
                         </span>
                         <span className="text-[#94A3B8]">&bull;</span>
-                        <span className="text-xs font-mono text-[#64748B] flex items-center gap-1">
-                          <Users className="w-3.5 h-3.5 text-[#0284C7]" />
+                        <span className="text-xs font-mono text-[#64748B] dark:text-[#94A3B8] flex items-center gap-1">
+                          <Users className="w-3.5 h-3.5 text-[#0284C7] dark:text-[#38BDF8]" />
                           <span>{activePhoto.participantCount} Peserta</span>
                         </span>
                       </div>
 
-                      <h3 className="hero-heading text-xl sm:text-2xl font-black uppercase text-[#0F172A] leading-snug tracking-tight">
+                      <h3 className="hero-heading text-xl sm:text-2xl font-black uppercase text-[#0F172A] dark:text-[#F8FAFC] leading-snug tracking-tight">
                         {activePhoto.title}
                       </h3>
                     </div>
 
                     {/* Kata-kata Mutiara / Quote Refleksi */}
                     {activePhoto.quote && (
-                      <div className="p-4 rounded-2xl bg-[#F0F9FF] border border-[#BAE6FD] relative">
-                        <Quote className="w-5 h-5 text-[#0284C7] mb-1.5 opacity-80" />
-                        <p className="text-xs sm:text-sm font-semibold text-[#0369A1] italic leading-relaxed">
+                      <div className="p-4 rounded-2xl bg-[#F0F9FF] dark:bg-[#1E293B] border border-[#BAE6FD] dark:border-[#0369A1] relative">
+                        <Quote className="w-5 h-5 text-[#0284C7] dark:text-[#38BDF8] mb-1.5 opacity-80" />
+                        <p className="text-xs sm:text-sm font-semibold text-[#0369A1] dark:text-[#7DD3FC] italic leading-relaxed">
                           &ldquo;{activePhoto.quote}&rdquo;
                         </p>
-                        <span className="text-[11px] font-mono text-[#0284C7] mt-1.5 block font-medium">
+                        <span className="text-[11px] font-mono text-[#0284C7] dark:text-[#38BDF8] mt-1.5 block font-medium">
                           &bull; Refleksi Kelas Alfi
                         </span>
                       </div>
@@ -354,22 +354,22 @@ export const TrainingGallerySection: React.FC = () => {
 
                     {/* Artikel Pendek Momen Ini */}
                     <div className="space-y-2">
-                      <span className="text-xs font-mono uppercase tracking-wider text-[#64748B] font-semibold flex items-center gap-1.5">
-                        <BookOpen className="w-3.5 h-3.5 text-[#0284C7]" />
+                      <span className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-[#94A3B8] font-semibold flex items-center gap-1.5">
+                        <BookOpen className="w-3.5 h-3.5 text-[#0284C7] dark:text-[#38BDF8]" />
                         <span>Cerita di Balik Momen:</span>
                       </span>
-                      <p className="text-xs sm:text-sm text-[#334155] leading-relaxed font-sans">
+                      <p className="text-xs sm:text-sm text-[#334155] dark:text-[#CBD5E1] leading-relaxed font-sans">
                         {activePhoto.shortStory || activePhoto.description}
                       </p>
                     </div>
 
                     {/* Pelajaran Praktis */}
                     {activePhoto.takeaway && (
-                      <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                        <span className="text-[11px] font-mono uppercase tracking-wider text-[#0284C7] block font-semibold mb-1">
+                      <div className="p-3.5 rounded-xl bg-[#F8FAFC] dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-[#334155]">
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8] block font-semibold mb-1">
                           Pelajaran Praktis:
                         </span>
-                        <p className="text-xs text-[#0F172A] leading-relaxed">
+                        <p className="text-xs text-[#0F172A] dark:text-[#F8FAFC] leading-relaxed">
                           {activePhoto.takeaway}
                         </p>
                       </div>
@@ -380,18 +380,18 @@ export const TrainingGallerySection: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => setActivePhotoModal(activePhoto)}
-                        className="px-5 py-2.5 rounded-full bg-[#0284C7] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#0369A1] transition-colors cursor-pointer shadow-xs flex items-center gap-2"
+                        className="px-5 py-2.5 rounded-full bg-[#0284C7] hover:bg-[#0369A1] text-white text-xs font-semibold transition-colors cursor-pointer shadow-sm flex items-center gap-2"
                       >
                         <Maximize2 className="w-3.5 h-3.5" />
-                        <span>Buka Foto & Detail Penuh</span>
+                        <span>Buka Detail Dokumentasi</span>
                       </button>
 
                       <button
                         type="button"
                         onClick={handleNext}
-                        className="px-4 py-2.5 rounded-full bg-white border border-[#CBD5E1] text-[#475569] text-xs font-semibold uppercase tracking-wider hover:text-[#0284C7] hover:border-[#0284C7] transition-colors cursor-pointer flex items-center gap-1.5"
+                        className="px-4 py-2.5 rounded-full bg-white dark:bg-[#1E293B] border border-[#CBD5E1] dark:border-[#334155] text-[#475569] dark:text-[#CBD5E1] text-xs font-semibold hover:text-[#0284C7] dark:hover:text-[#38BDF8] hover:border-[#0284C7] dark:hover:border-[#38BDF8] transition-colors cursor-pointer flex items-center gap-1.5 ml-auto"
                       >
-                        <span>Geser Foto Selanjutnya</span>
+                        <span>Foto Selanjutnya</span>
                         <ChevronRight className="w-3.5 h-3.5" />
                       </button>
                     </div>
@@ -408,9 +408,9 @@ export const TrainingGallerySection: React.FC = () => {
             {/* Slideable Category Filter Bar (No Downward Wrap) */}
             <div className="mb-8">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-[#64748B] font-semibold flex items-center gap-1.5">
+                <span className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-[#94A3B8] font-semibold flex items-center gap-1.5">
                   <span>Kategori Momen</span>
-                  <span className="text-[11px] text-[#94A3B8] font-normal hidden sm:inline">(Geser / Slide untuk memilih)</span>
+                  <span className="text-[11px] text-[#94A3B8] dark:text-[#64748B] font-normal hidden sm:inline">(Geser / Slide untuk memilih)</span>
                 </span>
 
                 {/* Left and Right Slide Controls */}
@@ -418,7 +418,7 @@ export const TrainingGallerySection: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => scrollCategoryFilter('left')}
-                    className="p-1.5 rounded-full bg-white border border-[#CBD5E1] text-[#475569] hover:text-[#0284C7] hover:border-[#0284C7] shadow-xs cursor-pointer transition-colors"
+                    className="p-1.5 rounded-full bg-white dark:bg-[#1E293B] border border-[#CBD5E1] dark:border-[#334155] text-[#475569] dark:text-[#CBD5E1] hover:text-[#0284C7] dark:hover:text-[#38BDF8] hover:border-[#0284C7] dark:hover:border-[#38BDF8] shadow-xs cursor-pointer transition-colors"
                     aria-label="Geser galeri ke kiri"
                   >
                     <ChevronLeft className="w-4 h-4" />
@@ -426,7 +426,7 @@ export const TrainingGallerySection: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => scrollCategoryFilter('right')}
-                    className="p-1.5 rounded-full bg-white border border-[#CBD5E1] text-[#475569] hover:text-[#0284C7] hover:border-[#0284C7] shadow-xs cursor-pointer transition-colors"
+                    className="p-1.5 rounded-full bg-white dark:bg-[#1E293B] border border-[#CBD5E1] dark:border-[#334155] text-[#475569] dark:text-[#CBD5E1] hover:text-[#0284C7] dark:hover:text-[#38BDF8] hover:border-[#0284C7] dark:hover:border-[#38BDF8] shadow-xs cursor-pointer transition-colors"
                     aria-label="Geser galeri ke kanan"
                   >
                     <ChevronRight className="w-4 h-4" />
@@ -435,7 +435,7 @@ export const TrainingGallerySection: React.FC = () => {
               </div>
 
               {/* Slide Track */}
-              <div className="relative w-full rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] p-1.5">
+              <div className="relative w-full rounded-2xl bg-[#F8FAFC] dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-[#334155] p-1.5">
                 <div
                   ref={galleryScrollRef}
                   className="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth flex-nowrap py-1 px-1 select-none"
@@ -456,13 +456,13 @@ export const TrainingGallerySection: React.FC = () => {
                     className={`shrink-0 whitespace-nowrap px-4 py-2 text-xs font-mono rounded-xl transition-all cursor-pointer flex items-center gap-2 ${
                       isSelected
                         ? 'bg-[#0284C7] text-white font-semibold shadow-xs'
-                        : 'bg-white text-[#475569] hover:bg-[#F0F9FF] hover:text-[#0284C7] border border-[#CBD5E1]'
+                        : 'bg-white dark:bg-[#0F172A] text-[#475569] dark:text-[#CBD5E1] hover:bg-[#F0F9FF] dark:hover:bg-[#1E293B] hover:text-[#0284C7] dark:hover:text-[#38BDF8] border border-[#CBD5E1] dark:border-[#334155]'
                     }`}
                   >
                     <span>{cat.label}</span>
                     <span
                       className={`text-[10px] px-1.5 py-0.5 rounded-md font-semibold ${
-                        isSelected ? 'bg-[#0369A1] text-white' : 'bg-[#F1F5F9] text-[#64748B]'
+                        isSelected ? 'bg-[#0369A1] text-white' : 'bg-[#F1F5F9] dark:bg-[#1E293B] text-[#64748B] dark:text-[#94A3B8]'
                       }`}
                     >
                       {count}
@@ -475,27 +475,15 @@ export const TrainingGallerySection: React.FC = () => {
             </div>
 
             {/* Gallery Grid */}
-            <motion.div
-              layout
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.06, margin: '-40px' }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              <AnimatePresence mode="popLayout">
-                {filteredPhotos.map((photo) => (
-                  <motion.div
-                    key={photo.id}
-                    layout
-                    variants={cardVariants}
-                    exit={{ opacity: 0, scale: 0.96, transition: { duration: 0.2 } }}
-                    whileHover={{ y: -4, transition: { duration: 0.25 } }}
-                    onClick={() => setActivePhotoModal(photo)}
-                    className="group flex flex-col justify-between rounded-[28px] overflow-hidden bg-white border border-[#E2E8F0] hover:border-[#0284C7] cursor-pointer shadow-xs hover:shadow-md transition-all"
-                  >
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredPhotos.map((photo) => (
+                <div
+                  key={photo.id}
+                  onClick={() => setActivePhotoModal(photo)}
+                  className="group flex flex-col justify-between rounded-[28px] overflow-hidden bg-white dark:bg-[#0F172A] border border-[#E2E8F0] dark:border-[#1E293B] hover:border-[#0284C7] dark:hover:border-[#38BDF8] cursor-pointer shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                >
                     {/* Image Container */}
-                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 dark:bg-slate-800">
                       <ImageWithSkeleton
                         src={photo.imageUrl}
                         fallbackSrc={photo.fallbackUrl}
@@ -519,37 +507,36 @@ export const TrainingGallerySection: React.FC = () => {
                     {/* Card Content & Short Article / Words */}
                     <div className="p-5 flex flex-col justify-between flex-1">
                       <div>
-                        <div className="flex items-center justify-between text-[11px] font-mono text-[#64748B] mb-2">
-                          <span className="font-semibold text-[#0284C7] truncate max-w-[160px]">{photo.client}</span>
+                        <div className="flex items-center justify-between text-[11px] font-mono text-[#64748B] dark:text-[#94A3B8] mb-2">
+                          <span className="font-semibold text-[#0284C7] dark:text-[#38BDF8] truncate max-w-[160px]">{photo.client}</span>
                           <span>{photo.date}</span>
                         </div>
 
-                        <h3 className="text-sm font-bold text-[#0F172A] leading-snug group-hover:text-[#0284C7] transition-colors mb-2 line-clamp-1">
+                        <h3 className="text-sm font-bold text-[#0F172A] dark:text-[#F8FAFC] leading-snug group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8] transition-colors mb-2 line-clamp-1">
                           {photo.title}
                         </h3>
 
                         {/* Kata-kata Mutiara Refleksi Singkat */}
                         {photo.quote ? (
-                          <p className="text-xs text-[#0369A1] italic bg-[#F0F9FF] p-2.5 rounded-xl border border-[#BAE6FD] mb-3 line-clamp-2">
+                          <p className="text-xs text-[#0369A1] dark:text-[#7DD3FC] italic bg-[#F0F9FF] dark:bg-[#1E293B] p-2.5 rounded-xl border border-[#BAE6FD] dark:border-[#0369A1] mb-3 line-clamp-2">
                             &ldquo;{photo.quote}&rdquo;
                           </p>
                         ) : null}
 
                         {/* Cuplikan Artikel Pendek */}
-                        <p className="text-xs text-[#475569] leading-relaxed line-clamp-2 mb-3">
+                        <p className="text-xs text-[#475569] dark:text-[#CBD5E1] leading-relaxed line-clamp-2 mb-3">
                           {photo.shortStory || photo.description}
                         </p>
                       </div>
 
-                      <div className="pt-3 border-t border-[#E2E8F0] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#0284C7]">
-                        <span>Baca Cerita & Buka Foto</span>
+                      <div className="pt-3 border-t border-[#E2E8F0] dark:border-[#1E293B] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
+                        <span>Buka Detail Dokumentasi</span>
                         <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </motion.div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>

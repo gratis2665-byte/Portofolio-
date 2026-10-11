@@ -1109,3 +1109,4 @@ export const WHATSAPP_TEMPLATES: WhatsAppTemplate[] = [
       'Halo Mas Alfi, saya melihat portofolio pelatihan Mas Alfi dan ingin berdiskusi mengenai penyesuaian materi pelatihan yang cocok untuk kebutuhan peserta kami.',
   },
 ];
+

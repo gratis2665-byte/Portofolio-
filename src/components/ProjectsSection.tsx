@@ -52,36 +52,36 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   return (
     <section
       id="projects"
-      className="relative z-10 w-full bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 px-4 sm:px-8 md:px-10 pt-20 pb-32 select-none border-t border-[#BAE6FD]/80 shadow-[0_-20px_40px_-15px_rgba(14,165,233,0.07)]"
+      className="relative z-10 w-full bg-white dark:bg-[#0B1120] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 px-4 sm:px-8 md:px-10 pt-20 pb-32 select-none border-t border-[#BAE6FD]/80 dark:border-[#1E293B] shadow-[0_-20px_40px_-15px_rgba(14,165,233,0.07)]"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <FadeIn delay={0} y={30}>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-14 gap-6">
             <div>
-              <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#0284C7] font-semibold block mb-2">
+              <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#0284C7] dark:text-[#38BDF8] font-semibold block mb-2">
                 Materi &bull; Modul Pelatihan
               </span>
               <h2
-                className="hero-heading font-black uppercase tracking-tight leading-none"
+                className="hero-heading font-black uppercase tracking-tight leading-none text-[#0F172A] dark:text-[#F8FAFC]"
                 style={{ fontSize: 'clamp(2rem, 6.5vw, 4.5rem)' }}
               >
                 Modul Pilihan
               </h2>
-              <p className="text-[#475569] text-xs sm:text-sm max-w-xl mt-3 leading-relaxed">
+              <p className="text-[#475569] dark:text-[#CBD5E1] text-xs sm:text-sm max-w-xl mt-3 leading-relaxed">
                 Koleksi materi belajar, panduan praktik public speaking, dan simulasi yang siap dipakai buat bikin kelas atau tim kamu makin seru dan percaya diri.
               </p>
             </div>
 
             {/* View Mode Switcher & Controls */}
             <div className="flex flex-wrap items-center gap-3 self-start md:self-auto">
-              <div className="flex items-center p-1 rounded-full bg-white border border-[#BAE6FD] shadow-xs">
+              <div className="flex items-center p-1 rounded-full bg-white dark:bg-[#1E293B] border border-[#BAE6FD] dark:border-[#334155] shadow-xs">
                 <button
                   onClick={() => setViewMode('slider')}
                   className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full transition-all cursor-pointer ${
                     viewMode === 'slider'
                       ? 'bg-[#0284C7] text-white shadow-xs'
-                      : 'text-[#64748B] hover:text-[#0F172A]'
+                      : 'text-[#64748B] dark:text-[#94A3B8] hover:text-[#0F172A] dark:hover:text-white'
                   }`}
                 >
                   Geser Santai
@@ -91,7 +91,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full transition-all cursor-pointer ${
                     viewMode === 'stack'
                       ? 'bg-[#0284C7] text-white shadow-xs'
-                      : 'text-[#64748B] hover:text-[#0F172A]'
+                      : 'text-[#64748B] dark:text-[#94A3B8] hover:text-[#0F172A] dark:hover:text-white'
                   }`}
                 >
                   Lihat Semua
@@ -104,14 +104,14 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   <button
                     onClick={handlePrev}
                     aria-label="Materi sebelumnya"
-                    className="p-3 rounded-full bg-white border border-[#BAE6FD] text-[#0284C7] hover:bg-[#E0F2FE] transition-all cursor-pointer active:scale-90 shadow-sm"
+                    className="p-3 rounded-full bg-white dark:bg-[#1E293B] border border-[#BAE6FD] dark:border-[#334155] text-[#0284C7] dark:text-[#38BDF8] hover:bg-[#E0F2FE] dark:hover:bg-[#334155] transition-all cursor-pointer active:scale-90 shadow-sm"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button
                     onClick={handleNext}
                     aria-label="Materi berikutnya"
-                    className="p-3 rounded-full bg-white border border-[#BAE6FD] text-[#0284C7] hover:bg-[#E0F2FE] transition-all cursor-pointer active:scale-90 shadow-sm"
+                    className="p-3 rounded-full bg-white dark:bg-[#1E293B] border border-[#BAE6FD] dark:border-[#334155] text-[#0284C7] dark:text-[#38BDF8] hover:bg-[#E0F2FE] dark:hover:bg-[#334155] transition-all cursor-pointer active:scale-90 shadow-sm"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
@@ -131,7 +131,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 className={`px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap transition-all cursor-pointer flex items-center gap-2 ${
                   safeIndex === idx
                     ? 'bg-[#0284C7] text-white font-bold shadow-sm'
-                    : 'bg-white text-[#64748B] hover:text-[#0284C7] border border-[#E2E8F0]'
+                    : 'bg-white dark:bg-[#1E293B] text-[#64748B] dark:text-[#94A3B8] hover:text-[#0284C7] dark:hover:text-[#38BDF8] border border-[#E2E8F0] dark:border-[#334155]'
                 }`}
               >
                 <span>{proj.number}</span>
@@ -164,22 +164,22 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                       handlePrev();
                     }
                   }}
-                  className="w-full rounded-[36px] sm:rounded-[48px] border border-[#BAE6FD] bg-white p-6 sm:p-8 md:p-10 shadow-lg shadow-sky-100/40 relative select-none flex flex-col justify-between cursor-grab active:cursor-grabbing overflow-hidden"
+                  className="w-full rounded-[36px] sm:rounded-[48px] border border-[#BAE6FD] dark:border-[#1E293B] bg-white dark:bg-[#0F172A] p-6 sm:p-8 md:p-10 shadow-lg shadow-sky-100/40 dark:shadow-black/50 relative select-none flex flex-col justify-between cursor-grab active:cursor-grabbing overflow-hidden"
                 >
                   {/* Top Row: Number, Category, Title & Action */}
                   <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                     <div className="flex items-center gap-4 sm:gap-6">
                       <span
-                        className="font-black text-[#0284C7] leading-none"
+                        className="font-black text-[#0284C7] dark:text-[#38BDF8] leading-none"
                         style={{ fontSize: 'clamp(2.2rem, 5vw, 3.8rem)' }}
                       >
                         {activeProject.number}
                       </span>
                       <div className="flex flex-col">
-                        <span className="text-xs font-mono uppercase tracking-widest text-[#0284C7] font-semibold mb-1">
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#0284C7] dark:text-[#38BDF8] font-semibold mb-1">
                           {activeProject.category}
                         </span>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase text-[#0F172A] tracking-wide leading-tight">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase text-[#0F172A] dark:text-[#F8FAFC] tracking-wide leading-tight">
                           {activeProject.name}
                         </h3>
                       </div>
@@ -194,7 +194,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   </div>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-[#334155] mb-5 leading-relaxed font-sans max-w-3xl">
+                  <p className="text-xs sm:text-sm text-[#334155] dark:text-[#CBD5E1] mb-5 leading-relaxed font-sans max-w-3xl">
                     {activeProject.description}
                   </p>
 
@@ -203,7 +203,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     {activeProject.technologies.map((t, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 rounded-md bg-white border border-[#E2E8F0] text-xs font-mono text-[#334155]"
+                        className="px-3 py-1 rounded-md bg-white dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-[#334155] text-xs font-mono text-[#334155] dark:text-[#CBD5E1]"
                       >
                         {t}
                       </span>
@@ -216,7 +216,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     <div className="md:col-span-5 flex flex-col gap-4 justify-between">
                       <div
                         onClick={() => onSelectProject?.(activeProject)}
-                        className="group/img w-full overflow-hidden rounded-[24px] sm:rounded-[32px] bg-[#F1F5F9] border border-[#E2E8F0] cursor-pointer relative"
+                        className="group/img w-full overflow-hidden rounded-[24px] sm:rounded-[32px] bg-[#F1F5F9] dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-[#334155] cursor-pointer relative"
                         style={{ height: 'clamp(140px, 16vw, 210px)' }}
                       >
                         <ImageWithSkeleton
@@ -228,7 +228,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                       </div>
                       <div
                         onClick={() => onSelectProject?.(activeProject)}
-                        className="group/img w-full overflow-hidden rounded-[24px] sm:rounded-[32px] bg-[#F1F5F9] border border-[#E2E8F0] cursor-pointer relative"
+                        className="group/img w-full overflow-hidden rounded-[24px] sm:rounded-[32px] bg-[#F1F5F9] dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-[#334155] cursor-pointer relative"
                         style={{ height: 'clamp(160px, 20vw, 280px)' }}
                       >
                         <ImageWithSkeleton
@@ -243,7 +243,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     {/* Right Column (7 cols) - 1 tall showcase image */}
                     <div
                       onClick={() => onSelectProject?.(activeProject)}
-                      className="group/img md:col-span-7 overflow-hidden rounded-[24px] sm:rounded-[32px] bg-[#F1F5F9] border border-[#E2E8F0] min-h-[260px] md:min-h-full cursor-pointer relative"
+                      className="group/img md:col-span-7 overflow-hidden rounded-[24px] sm:rounded-[32px] bg-[#F1F5F9] dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-[#334155] min-h-[260px] md:min-h-full cursor-pointer relative"
                     >
                       <ImageWithSkeleton
                         src={activeProject.col2Img}
@@ -302,26 +302,23 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               <ProjectStackSkeleton />
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {projects.map((project, idx) => (
-                  <motion.div
+                {projects.map((project) => (
+                  <div
                     key={project.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: idx * 0.1 }}
                     onClick={() => onSelectProject?.(project)}
-                    className="p-6 sm:p-8 rounded-[36px] bg-white border border-[#E2E8F0] hover:border-[#38BDF8] transition-all cursor-pointer flex flex-col justify-between group shadow-sm hover:shadow-md relative"
+                    className="p-6 sm:p-8 rounded-[36px] bg-white dark:bg-[#0F172A] border border-[#E2E8F0] dark:border-[#1E293B] hover:border-[#38BDF8] transition-all cursor-pointer flex flex-col justify-between group shadow-sm hover:shadow-md relative"
                   >
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <span className="font-black text-3xl text-[#0284C7] font-mono">
+                        <span className="font-black text-3xl text-[#0284C7] dark:text-[#38BDF8] font-mono">
                           {project.number}
                         </span>
-                        <span className="text-xs font-mono uppercase tracking-wider text-[#0284C7] font-semibold">
+                        <span className="text-xs font-mono uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8] font-semibold">
                           {project.category}
                         </span>
                       </div>
 
-                      <div className="w-full h-56 rounded-[24px] overflow-hidden bg-[#F1F5F9] border border-[#E2E8F0] mb-5 relative">
+                      <div className="w-full h-56 rounded-[24px] overflow-hidden bg-[#F1F5F9] dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-[#334155] mb-5 relative">
                         <ImageWithSkeleton
                           src={project.col2Img}
                           alt={project.name}
@@ -330,10 +327,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                         />
                       </div>
 
-                      <h3 className="text-xl font-bold uppercase text-[#0F172A] group-hover:text-[#0284C7] transition-colors mb-2">
+                      <h3 className="text-xl font-bold uppercase text-[#0F172A] dark:text-[#F8FAFC] group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8] transition-colors mb-2">
                         {project.name}
                       </h3>
-                      <p className="text-xs text-[#475569] leading-relaxed font-sans line-clamp-3 mb-4">
+                      <p className="text-xs text-[#475569] dark:text-[#CBD5E1] leading-relaxed font-sans line-clamp-3 mb-4">
                         {project.description}
                       </p>
                     </div>
@@ -343,19 +340,19 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                         {project.technologies.slice(0, 4).map((tech, tIdx) => (
                           <span
                             key={tIdx}
-                            className="px-2.5 py-0.5 rounded-md bg-[#F8FAFC] border border-[#E2E8F0] text-xs font-mono text-[#64748B]"
+                            className="px-2.5 py-0.5 rounded-md bg-[#F8FAFC] dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-[#334155] text-xs font-mono text-[#64748B] dark:text-[#94A3B8]"
                           >
                             {tech}
                           </span>
                         ))}
                       </div>
 
-                      <div className="pt-3 border-t border-[#E2E8F0] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#0284C7]">
+                      <div className="pt-3 border-t border-[#E2E8F0] dark:border-[#1E293B] flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
                         <span>Lihat Detail Materi</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             )}
